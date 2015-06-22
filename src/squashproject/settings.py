@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'stbeehive.oracle.com'
+EMAIL_HOST_USER = 'hafizul.azeez@oracle.com'
+EMAIL_HOST_PASSWORD = '5rRN8Eabc1'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
 
 # Application definition
 
@@ -35,10 +40,12 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # THIRD PARTY APPS,
     'crispy_forms',
+    'registration',
     # MY APPS,
     'squashapp'
 )
@@ -59,7 +66,9 @@ ROOT_URLCONF = 'squashproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR,'templates'),
+        os.path.join(BASE_DIR,'shared_templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,6 +81,7 @@ TEMPLATES = [
     },
 ]
 
+print TEMPLATES
 
 WSGI_APPLICATION = 'squashproject.wsgi.application'
 
@@ -134,3 +144,11 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_production","media_r
 
 # SETTINGS FOR CRISPY FORMS
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+#DJANGO REGISTRATION REDUX SETTINGS
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/home/'
+

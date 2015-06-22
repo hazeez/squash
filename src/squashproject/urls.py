@@ -13,15 +13,21 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import include, url
+from django.conf.urls import include, url, patterns
 from django.contrib import admin
+from django.core.urlresolvers import reverse_lazy
+
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     # for squash app
     # name will be referenced in the templates as
     # <a href="{% url 'login' %}"></a><
-    url(r'^login/', 'squashapp.views.login', name='login'),
-    url(r'^$', 'squashapp.views.index', name='index'),
+    # url(r'^$', 'squashapp.views.login', name='login'),
+    url(r'^$', 'squashapp.views.login', name='login'),
+    url(r'^home', 'squashapp.views.home', name='home'),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('registration.backends.default.urls')),
 ]

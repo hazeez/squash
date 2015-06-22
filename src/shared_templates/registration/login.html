@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% load i18n %} {% load staticfiles %} {% load crispy_forms_tags %} {% block css %}
+<link href={% static "squashapp/css/bootstrap.min.css" %} rel="stylesheet">
+<link href={% static "squashapp/css/font-awesome.min.css" %} rel="stylesheet">
+<!-- Custom styles for this template
+    TODO - #write base.css-->
+<link href={% static "squashapp/css/custom-base.css" %} rel="stylesheet">
+<link href={% static "squashapp/css/custom-login.css" %} rel="stylesheet"> {% endblock css %} {% block search-box %} {% endblock search-box %} {% block greetings %} {% endblock greetings %} {% block settings-dropdown %} {% endblock settings-dropdown %} {% block sidebar %} {% endblock sidebar %} {% block breadcrumb-wrapper %} {% endblock breadcrumb-wrapper %} {% block breadcrumb %} {% endblock breadcrumb %} {% block content-wrapper %}
+<div id="main-wrapper" class="col-md-12 pull-right custom-right-sidebar">
+    <div id="main">
+        {% block content %}
+        <div class='row'>
+            <div class='col-md-3 col-sm-offset-4'>
+
+                <h1>Login</h1>
+                <br/>
+
+                <form method="post" action=".">
+                    {% csrf_token %} {{ form|crispy }}
+                    <input class='btn btn-primary' type="submit" value="{% trans 'Submit' %}" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </form>
+            </div>
+        </div>
+        <br/>
+        <div class='row'>
+            <div class='col-md-3 col-sm-offset-4 text-align-center'>
+                <p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+                <p>{% trans "Not a member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock content-wrapper %}
