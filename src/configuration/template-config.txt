@@ -1,0 +1,42 @@
+head
+    - css
+body
+    - search-box
+    - greetings
+    - settings-dropdown
+    - sidebar
+    - breadcrumb
+    - content
+
+
+{% block search-box %}
+
+{% endblock search-box %}
+
+{% block greetings %}
+
+{% endblock greetings %}
+
+{% block settings-dropdown %}
+
+{% endblock settings-dropdown %}
+
+{% block sidebar %}
+
+{% endblock sidebar %}
+
+{% block breadcrumb-wrapper %}
+
+{% endblock breadcrumb-wrapper %}
+
+{% block breadcrumb %}
+
+{% endblock breadcrumb %}
+
+{% block content-wrapper %}
+
+{% endblock content-wrapper %}
+
+{% block content %}
+
+{% endblock content %}

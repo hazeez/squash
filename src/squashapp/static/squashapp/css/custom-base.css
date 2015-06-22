@@ -1,0 +1,150 @@
+/*base.css - custom base file for base.html*/
+
+/* Default colors
+
+oracle default text = rgb(70,87,94)
+oracle default red = rgb(248,0,0)
+oracle default darkgrey = rgb(95,95,95)
+oracle default background = rgb(220,227,228)
+oracle default body background = rgb(141,166,177)
+oracle default white = rgb(255,255,255)
+oracle default table-header = rgb(176,195,200)
+oracle hover color = rgb(138,19,59)
+*/
+
+
+body {
+    background-color: rgb(141,166,177);
+    font-family: "Open Sans", Arial, sans-serif;
+    color: rgb(70,87,94);
+    font-size:12px;
+}
+.navbar, .navbar-default, .sidebar {
+background-color: rgb(237,237,237);
+}
+.navbar-brand {
+    padding-left: 50px;
+    font-size: 24px;
+}
+.navbar-default .navbar-header .navbar-brand {
+    color: rgb(70,87,94);
+}
+/*.custom-btn-go {
+    margin-left: -8px;
+    background-color: rgb(138,19,59);
+    color: #FFF;
+    border: 1px solid rgb(138,19,59);
+}
+.custom-btn-go:hover{
+    background-color: rgb(248,0,0);
+    border: 1px solid rgb(248,0,0);
+    color: #FFF;
+}*/
+.custom-btn-go{
+    margin-left:-8px;
+}
+
+.custom-welcome-user {
+    margin-top: 17px;
+}
+.custom-settings-button {
+    margin-top: 10px;
+    margin-left: 3%;
+}
+.custom-settings-dropdown {
+    font-size:12px;
+    margin-left: -100px;
+}
+.custom-left-sidebar, .custom-right-sidebar {
+    margin-left: 6px;
+    margin-top: 55px;
+    /*background-color: rgb(237,237,237);*/
+    background-color: #fff;
+}
+#wrapper {
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#sidebar-wrapper {
+    border-right: 1px solid gray;
+    height: 100%;
+    padding: 0 0 0 ;
+    position: fixed;
+    margin-bottom: 10px;
+}
+#sidebar {
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+}
+#main-wrapper, #top-main-wrapper {
+    float:right;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+}
+#main, #top-main {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 10px;
+    position: relative;
+}
+
+#top-main-wrapper, #top-main {
+    height: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+#top-main-wrapper {
+    margin-top: 55px;
+}
+.custom-right-sidebar, .custom-top-right-sidebar {
+    margin-right: 4px;
+}
+#main-wrapper {
+    margin-top: 1px;
+}
+.col-md-1 {
+    width: 12%;
+}
+.col-md-11 {
+    width: 87.2%;
+}
+ul li a {
+            color: rgb(70,87,94);
+        }
+ul li {
+    list-style-type: none;
+}
+.custom-sub-list {
+    margin-left: -10px;
+    padding-top: 5px;
+}
+.custom-main-list {
+    font-weight: bold;
+    font-size:13px;
+    padding-top: 5px;
+}
+.second-item {
+    padding-top: 10px;
+}
+.breadcrumb{
+    background-color: #fff;
+    margin: -5px 0 5px -15px;
+
+}
+.breadcrumb li a{
+    /*color: rgb(70,87,94);*/
+    color: #C9302C;
+    ltext-decoration: underline;
+}
+.breadcrumb li a:active{
+    /*color: rgb(70,87,94);*/
+    color: #C9302C;
+}
+

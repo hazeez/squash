@@ -1,0 +1,561 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"squash",
+				"squashapp"
+			],
+			[
+				"requ",
+				"request"
+			],
+			[
+				"OpenSans",
+				"OpenSans-Light"
+			],
+			[
+				"tem",
+				"TEMPLATES	statement"
+			],
+			[
+				"base",
+				"BASE_DIR	statement"
+			],
+			[
+				"HTTP",
+				"HttpResponseRedirect	class"
+			],
+			[
+				"context",
+				"context"
+			],
+			[
+				"try",
+				"try	Try/Except/Else"
+			],
+			[
+				"get_obejc",
+				"get_object_or_404	function"
+			],
+			[
+				"get",
+				"get_object_or_404	function"
+			],
+			[
+				"choice",
+				"choice_list"
+			],
+			[
+				"choi",
+				"choice_list"
+			],
+			[
+				"que",
+				"question_id	(views.py)"
+			],
+			[
+				"question",
+				"question_id"
+			],
+			[
+				"H",
+				"HttpResponse	class"
+			],
+			[
+				"pub",
+				"pub_date"
+			],
+			[
+				"Choice",
+				"ChoiceInline"
+			],
+			[
+				"Ch",
+				"Choice"
+			],
+			[
+				"Question",
+				"QuestionAdmin"
+			],
+			[
+				"time",
+				"timezone	module"
+			],
+			[
+				"queston",
+				"question_text	statement"
+			],
+			[
+				"date",
+				"DateTimeField	class"
+			],
+			[
+				"max",
+				"max_length"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "head\n    - css\nbody\n    - search-box\n    - greetings\n    - settings-dropdown\n    - sidebar\n    - breadcrumb\n    - content\n\n\n{% block search-box %}\n\n{% endblock search-box %}\n\n{% block greetings %}\n\n{% endblock greetings %}\n\n{% block settings-dropdown %}\n\n{% endblock settings-dropdown %}\n\n{% block sidebar %}\n\n{% endblock sidebar %}\n\n{% block breadcrumb-wrapper %}\n\n{% endblock breadcrumb-wrapper %}\n\n{% block breadcrumb %}\n\n{% endblock breadcrumb %}\n\n{% block content-wrapper %}\n\n{% endblock content-wrapper %}\n\n{% block content %}\n\n{% endblock content %}\n",
+			"file": "src/configuration/template-config.txt",
+			"file_size": 557,
+			"file_write_time": 130794387767351684,
+			"settings":
+			{
+				"buffer_size": 557,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/squashapp/templates/login.html",
+			"settings":
+			{
+				"buffer_size": 930,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 138.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/root/My-Code/squash/src",
+		"/root/My-Code/squash/src/squashapp",
+		"/root/My-Code/squash/src/squashapp/static",
+		"/root/My-Code/squash/src/squashapp/static/squashapp",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css",
+		"/root/My-Code/squash/src/squashapp/templates",
+		"/root/My-Code/squash/src/squashproject",
+		"/root/My-Code/squash/static_production",
+		"/root/My-Code/squash/static_production/static_root/squashapp",
+		"/root/My-Code/squash/static_production/static_root/squashapp/css",
+		"/root/My-Code/squash/static_production/static_root/squashapp/js"
+	],
+	"file_history":
+	[
+		"/root/My-Code/squash/src/squashproject/settings.py",
+		"/root/My-Code/squash/src/squashapp/urls.py",
+		"/root/My-Code/squash/src/squashproject/urls.py",
+		"/root/My-Code/squash/squash-dev.sublime-workspace",
+		"/root/My-Code/squash/src/squashapp/views.py",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-login.css",
+		"/root/My-Code/squash/src/squashapp/templates/base.html",
+		"/root/My-Code/squash/src/squashapp/templates/home.html",
+		"/root/My-Code/squash/src/squashapp/templates/login1.html",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-base.css",
+		"/root/My-Code/squash/src/squashapp/templates/squashapp/index.html",
+		"/root/My-Code/django_tut/mysite/polls/views.py",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/opensans.css",
+		"/root/My-Code/squash/static_production/static_root/squashapp/css/bootstrap.min.css",
+		"/root/My-Code/django_tut/mysite/polls/templates/polls/index.html",
+		"/root/My-Code/django_tut/mysite/polls/urls.py",
+		"/root/My-Code/django_tut/mysite/mysite/urls.py",
+		"/root/My-Code/django_tut/mysite/mysite/settings.py",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/font-awesome.css",
+		"/root/My-Code/squash/src/static_production/static_root/squashapp/js/1.js",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/js/1.js",
+		"/root/My-Code/squash/src/squashapp/static/js/1.js",
+		"/root/My-Code/squash/src/squash/settings.py",
+		"/root/My-Code/squash/Configuration.txt",
+		"/root/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/root/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/root/.config/sublime-text-3/Packages/Djaneiro/Settings/HTML (Django).sublime-settings",
+		"/root/.config/sublime-text-3/Packages/User/HTML (Django).sublime-settings",
+		"/root/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/root/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/root/My-Code/squash/squash-dev.sublime-project",
+		"/root/.config/sublime-text-3/Packages/User/polls-djangoproject.sublime-workspace",
+		"/root/My-Code/django_tut/mysite/polls/templates/polls/detail.html",
+		"/root/My-Code/django_tut/mysite/polls/templates/polls/results.html",
+		"/root/My-Code/django_tut/mysite/polls/templates/polls/choice.html",
+		"/root/My-Code/django_tut/mysite/polls/models.py",
+		"/root/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/root/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/root/My-Code/django_tut/mysite/polls/migrations/0001_initial.py",
+		"/root/My-Code/django_tut/mysite/polls/admin.py",
+		"/root/My-Code/django_tut/mysite/templates/admin/base_site.html",
+		"/root/My-Code/django_tut/mysite/index.html",
+		"/root/My-Code/django_tut/mysite/mysite/templates/admin/base.html",
+		"/home/hac/My-Code/django_tut/mysite/polls-django.sublime-project",
+		"/root/.config/sublime-text-3/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/root/.config/sublime-text-3/Packages/Djaneiro/Settings/Python (Django).sublime-settings",
+		"/home/hac/My-Code/django_tut/mysite/mysite/settings.py",
+		"/home/hac/My-Code/django_tut/mysite/polls/models.py",
+		"/home/hac/My-Code/django_tut/mysite/db.sqlite3",
+		"/home/hac/My-Code/django_tut/mysite/polls/tests.py",
+		"/home/hac/My-Code/django_tut/mysite/polls/hi.text",
+		"/home/hac/My-Code/django_tut/mysite/polls/test.html",
+		"/home/hac/My-Code/django_tut/mysite/polls/test1.html",
+		"/usr/share/applications/sublime3.desktop"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"squash",
+			"login",
+			"squash",
+			"blockname",
+			"../../../../",
+			"../../",
+			"tut_django",
+			"tut_djang",
+			"tut_django",
+			"[",
+			"pid",
+			"id",
+			"branding",
+			"django",
+			"site_header",
+			"{%",
+			"lint",
+			"Lint",
+			"lint"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/configuration/template-config.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"is_xml": false,
+							"open_with_edit": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/squashapp/templates/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "squash-dev.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 326.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

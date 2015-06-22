@@ -1,0 +1,148 @@
+Infrastructure setup
+--------------------
+
+Host operating system
+---------------------
+Linux
+-----
+Set up Oracle Linux 7.1
+set proxy and environment variables
+-------------------------
+edit /etc/environment and provide proxy information
+http_proxy=www-proxy.idc.oracle.com:80
+https_proxy=www-proxy.idc.oracle.com:80
+ftp_proxy=www-proxy.idc.oracle.com:80
+
+edit /etc/yum.conf and add proxy information
+proxy=http://www-proxy.idc.oracle.com:80
+
+Update the packages - yum update
+
+Enable additional repositories
+----------------------------
+Check dave's url - mail in the gds linux group
+
+Diable oracle-public-yum repository
+-----------------------------------
+check dave's url - mail in the gds linux group
+
+VBox Guest Additions
+--------------------
+Install VBOX guest additions
+Mount the VBOX guest additions ISO in Virtual Box Software
+Open the guest addition iso in the terminal
+navigate to the ./VBOXLinuxAdditions.sh folder and run it
+install missing dependencies - i.e. kernel-devel package and gcc package if needed
+shutdown the machine
+unmount the VBOX Guest additions ISO and reboot
+
+
+Additional Packages
+--------------------
+Download and install sublime text 3
+Install package control
+Install additional packages
+package configuration - see gmail sub: sublime text
+
+Change Mozilla Preferences
+--------------------------
+network proxy : www-proxy.idc.oracle.com
+apply for all protocols
+change the cache size limit to 25MB
+install addon adblock plus
+
+Dev Environment Setup
+---------------------
+Use newcoder.io and install pip
+install virtualenv
+install virtualenvwrapper
+export /usr/local/bin/virtualenvwrapper.sh file to ~/.bash_profile or ~/.bashrc
+
+Python setup
+------------
+1. Install Django - pip install django
+
+Install Oracle XE
+-----------------
+1. Download Oracle XE rpm package and use the command rpm -ivh oraclexe....rpm
+2. to delete the installation use rpm -e oraclexe
+3. navigate to /etc/init.d
+4. type the command sh oracle-xe configure - to configure the database
+5. accept the defaults except the password
+6. use sh oracle-xe start - to start the database and
+   use sh oracle-xe stop - to stop the database
+   set ORACLE HOME PATH in the bash_profile file or .bashrc file
+   ----------------------
+   settings
+   ----------------------
+    ORACLE_BASE=/u01/app/oracle; export ORACLE_BASE
+    ORACLE_HOME=$ORACLE_BASE/product/11.2.0/xe; export ORACLE_HOME
+    ORACLE_SID=xe; export ORACLE_SID
+    export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
+    export PATH=$ORACLE_HOME/bin:$PATH
+
+
+    add oraclehome to path or run oracle_env.sh present in this path
+    using the following command . oracle_env.sh
+    /u01/app/oracle/product/11.2.0/xe/bin
+
+    or copy the contents of oracle_env.sh to .bashrc or .bash_profile
+
+
+7. check tnsnames.ora file to check if settings are fine
+8. if any errors connecting to the database check /etc/hosts file
+it should read
+127.0.0.1   localhost
+::1         localhost
+
+
+Setting up new schema
+---------------------
+1. login to sqlplus as system
+command - sqlplus
+2. give username and password
+3. in the sql prompt type > create user 'hac' identified by 'some password';
+4. give dba rights if necessary
+- > grant dba to hac;
+
+setting up django for oracle
+-----------------------------
+1. to setup up django for oracle - install cx_oracle package
+- pip install cx_Oracle
+2. set up a client for the appropriate oracle verison installed from the below path
+http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html
+3. set up the path LD_LIBRARY_PATH= /usr/lib/oracle/11.2/client64/lib
+4. export this path to the ~/.bash_profile file so that it gets run at the terminal else it will throw an error
+5. change setting in django settings.py file
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'XE',cd
+        'USER':'hac',
+        'PASSWORD': 'toor',
+        'HOST':'localhost',
+        'PORT':'1521',
+    }
+}
+
+setting up sqa developer
+------------------------
+needed to see the data entered in the database
+exact instructions below
+
+- Ensure you have a JDK installed, if not, download
+    - rpm -Uhv sqldeveloper-(build number)-1.noarch.rpm (install the package)
+    - cd sqldeveloper (go to sqldeveloper folder)
+    - ./sqldeveloper.sh (run sqldeveloper.sh file) or
+    - go to terminal and type sqldeveloper and it will ask for the jdk path
+    - You will be prompted to enter a jdk path. (ie usr/java/jdk1.8.0_25)
+    - SQL Developer will automatically launch once jdk location is provided
+
+
+
+
+
+
+
+
+

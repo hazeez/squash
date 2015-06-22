@@ -1,0 +1,24 @@
+Dev Configuration
+-------------------
+
+1.install pip
+2.install requirements django, cx-oracle
+3.setup a database schema
+4.grant permissions to the schema
+5.change settings.py file to include database schema
+6.change time zone and locale
+7.configure static root and static files path
+8.configure media root
+run python manage.py collectstatic to check if static files are getting copied
+-------------
+this process is needed in case of self hosting
+-------------
+9.download bootstrap, jquery
+10.download fontawesome
+11.configure bootstrap, jquery and fontawesome
+12.download open sans font - use google webfonts helper application
+13.configure fonts url in the <<fontname.css>> file
+
+
+
+
