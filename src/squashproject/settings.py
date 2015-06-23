@@ -27,11 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_SSL = True
 EMAIL_HOST = 'stbeehive.oracle.com'
 EMAIL_HOST_USER = 'hafizul.azeez@oracle.com'
 EMAIL_HOST_PASSWORD = '5rRN8Eabc1'
 EMAIL_PORT = 465
-EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Application definition
 
