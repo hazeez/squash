@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import include, url, patterns
 from django.contrib import admin
 from django.core.urlresolvers import reverse_lazy
-
 from django.contrib.auth import views as auth_views
 
 
@@ -25,8 +24,12 @@ urlpatterns = [
     # name will be referenced in the templates as
     # <a href="{% url 'login' %}"></a><
     # url(r'^$', 'squashapp.views.login', name='login'),
-    url(r'^$', 'squashapp.views.login', name='login'),
+    url(r'^$', 'squashapp.views.home', name='home'),
     url(r'^home', 'squashapp.views.home', name='home'),
+
+    # url(r'^accounts/login/$', auth_views.login),
+    # This is an example of how to reference an inbuilt existing view in django
+    # url(r'^$', auth_views.login),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
