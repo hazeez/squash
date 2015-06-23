@@ -149,6 +149,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
 SITE_ID = 1
-LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/home/'
+LOGIN_URL = '/accounts/login/'
 

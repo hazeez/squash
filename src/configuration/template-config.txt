@@ -40,3 +40,13 @@ body
 {% block content %}
 
 {% endblock content %}
+
+-------------------------------
+registration - template mapping
+-------------------------------
+{% url 'auth_login' %} - registration/login
+{% url 'auth_logout' %} - registration/logout
+
+{% url 'auth_password_reset' %} - registration/password_reset_form
+{% url 'registration_register' %} - registration/registration_form
+

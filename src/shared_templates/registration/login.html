@@ -15,17 +15,18 @@
                     <li><a href="{% url 'auth_password_reset' %}">Reset Password</a></li>
                 </ul>
             </div>
- {% endblock settings-dropdown %} {% block sidebar %} {% endblock sidebar %} {% block breadcrumb-wrapper %} {% endblock breadcrumb-wrapper %} {% block breadcrumb %} {% endblock breadcrumb %} {% block content-wrapper %}
+ {% endblock settings-dropdown %} {% block sidebar %} {% endblock sidebar %} {% block breadcrumb-wrapper %} {% endblock breadcrumb-wrapper %} {% block breadcrumb %} {% endblock breadcrumb %}
+ {% block content-wrapper %}
 <div id="main-wrapper" class="col-md-12 pull-right custom-right-sidebar">
     <div id="main">
         {% block content %}
         <div class='row'>
 
-            <div class="form-title col-md-2 col-sm-offset-4">
-            <h1>Login:</h1>
+            <div class="form-title col-md-2 col-md-offset-4">
+            <h2>Login</h2>
                 <br/>
             </div>
-            <div class='custom-form col-md-3 col-sm-offset-4'>
+            <div class='custom-form col-md-3 col-md-offset-4'>
 
                 <form method="post" action=".">
                     {% csrf_token %}
