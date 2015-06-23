@@ -4,20 +4,32 @@
 		"selected_items":
 		[
 			[
-				"font-",
-				"font-size"
+				"po",
+				"pos	position: ${1:relative};"
 			],
 			[
-				"auth",
-				"auth_login"
+				"bac",
+				"background-color"
 			],
 			[
-				"squash",
-				"squashapp"
+				"rgb",
+				"rgb(95,95,95	(custom-base.css)"
 			],
 			[
-				"requ",
-				"request"
+				"sq",
+				"squashapp	(urls.py)"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"in",
+				"inline-block"
 			],
 			[
 				"OpenSans",
@@ -115,10 +127,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
-		"last_filter": "",
+		"height": 98.0,
+		"last_filter": "disable",
 		"selected_items":
 		[
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
 			[
 				"pack",
 				"Preferences: Browse Packages"
@@ -137,86 +161,106 @@
 	"distraction_free":
 	{
 		"menu_visible": true,
-		"show_minimap": false,
+		"show_minimap": true,
 		"show_open_files": false,
-		"show_tabs": false,
+		"show_tabs": true,
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
 	"expanded_folders":
 	[
 		"/root/My-Code/squash/src",
-		"/root/My-Code/squash/src/configuration",
 		"/root/My-Code/squash/src/shared_templates",
 		"/root/My-Code/squash/src/shared_templates/registration",
 		"/root/My-Code/squash/src/squashapp",
 		"/root/My-Code/squash/src/squashapp/static",
+		"/root/My-Code/squash/src/squashapp/static/squashapp",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css",
 		"/root/My-Code/squash/src/squashapp/templates",
 		"/root/My-Code/squash/src/squashproject",
-		"/root/My-Code/squash/static_production"
+		"/root/My-Code/squash/static_production",
+		"/root/My-Code/squash/static_production/static_root"
 	],
 	"file_history":
 	[
+		"/root/My-Code/squash/src/shared_templates/registration/activate.html",
+		"/root/My-Code/squash/src/shared_templates/registration/activation_complete.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_reset_done.html",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-base.css",
+		"/root/My-Code/squash/src/squashapp/templates/home.html",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-password-reset.css",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-password-change.css",
+		"/root/My-Code/squash/src/shared_templates/registration/registration_complete.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_reset_form.html",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-login.css",
+		"/root/My-Code/squash/src/squashapp/templates/base.html",
+		"/root/My-Code/squash/src/shared_templates/registration/logout.html",
+		"/root/My-Code/squash/src/shared_templates/registration/registration_form.html",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-logout.css",
 		"/root/My-Code/squash/src/squashproject/settings.py",
 		"/root/My-Code/squash/src/squashapp/views.py",
-		"/root/My-Code/squash/src/squashproject/urls.py",
-		"/root/My-Code/squash/src/squashapp/templates/squashapp/base.html",
-		"/root/My-Code/squash/src/squashapp/templates/base.html",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-base.css",
 		"/root/My-Code/squash/src/shared_templates/registration/login.html",
-		"/root/My-Code/squash/src/shared_templates/registration/activation_complete.html",
-		"/root/My-Code/squash/src/shared_templates/registration/logout.html",
-		"/root/My-Code/squash/src/shared_templates/registration/password_reset_done.html",
-		"/root/My-Code/squash/src/shared_templates/registration/registration_form.html",
-		"/root/My-Code/squash/src/shared_templates/registration/registration_complete.html",
-		"/root/My-Code/squash/src/shared_templates/registration/registration_closed.html",
-		"/root/My-Code/squash/src/shared_templates/registration/password_reset_form.html",
-		"/root/My-Code/squash/src/shared_templates/registration/password_reset_email.html",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-password-reset.css",
-		"/root/My-Code/squash/src/shared_templates/registration/password_reset_confirm.html",
-		"/root/My-Code/squash/src/shared_templates/registration/password_reset_complete.html",
-		"/root/My-Code/squash/src/shared_templates/registration/password_change_form.html",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-password-change.css",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-logout.css",
-		"/root/My-Code/squash/src/squashapp/templates/login.html",
-		"/root/My-Code/squash/src/shared_templates/registration/password_change_done.html",
-		"/root/My-Code/squash/src/shared_templates/registration/activation_email_subject.txt",
-		"/root/My-Code/squash/src/shared_templates/registration/activation_email.txt",
-		"/root/My-Code/squash/src/shared_templates/registration/activate.html",
-		"/root/My-Code/squash/src/configuration/template-config.txt",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-login.css",
-		"/root/My-Code/squash/src/squashapp/templates/home.html",
 		"/root/My-Code/squash/src/squashapp/urls.py",
-		"/root/My-Code/Try-Django-1.8/src/trydjango18/old_settings.py",
-		"/root/My-Code/squash/squash-dev.sublime-workspace",
-		"/root/My-Code/squash/src/squashapp/templates/login1.html",
+		"/root/My-Code/squash/src/squashapp/shared_templates/registration/login.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/login.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/registration_form.html",
+		"/root/Envs/squash-dev/lib/python2.7/site-packages/registration/templates/registration/login.html",
+		"/root/My-Code/squash/src/squashproject/urls.py",
+		"/root/My-Code/squash/src/squashapp/templates/squashapp/home.html",
 		"/root/My-Code/squash/src/squashapp/templates/squashapp/index.html",
+		"/root/My-Code/squash/src/squashapp/templates/index.html",
+		"/root/My-Code/squash/src/squashapp/templates/test.html",
+		"/root/My-Code/Try-Django-1.8/src/trydjango18/settings/production.py",
+		"/root/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/root/My-Code/squash/src/squashapp/templates/squashapp/base.html",
+		"/root/Envs/squash-dev/lib/python2.7/site-packages/registration/backends/default/urls.py",
+		"/root/My-Code/squash/src/squashapp/templates/squashapp/test.html",
+		"/root/My-Code/squash/src/squashapp/templates/squashapp/login.html",
+		"/root/Envs/squash-dev/lib/python2.7/site-packages/registration/backends/simple/urls.py",
+		"/root/My-Code/squash/src/squashapp/templates/registration/registration_base.html",
+		"/root/Envs/squash-dev/lib/python2.7/site-packages/registration/templates/registration/registration_base.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/registration_complete.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/registration_closed.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/password_reset_form.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/password_reset_email.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/password_reset_done.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/password_reset_confirm.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/password_reset_complete.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/password_change_form.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/password_change_done.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/logout.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/activation_complete.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/activate.html",
+		"/root/Envs/squash-dev/lib/python2.7/site-packages/registration/templates/registration/activate.html",
+		"/root/My-Code/squash/src/squashapp/templates/registration/activation_email_subject.txt",
+		"/root/My-Code/squash/src/squashapp/templates/registration/activation_email.txt",
+		"/root/My-Code/Try-Django-1.8/src/trydjango18/urls.py",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/font-awesome.css",
+		"/root/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/root/.config/sublime-text-3/Packages/LiveReload/LiveReload.sublime-settings",
+		"/root/My-Code/squash/src/squashproject/wsgi.py",
+		"/root/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/root/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/root/My-Code/django_tut/mysite/polls/views.py",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/opensans.css",
-		"/root/My-Code/squash/static_production/static_root/squashapp/css/bootstrap.min.css",
 		"/root/My-Code/django_tut/mysite/polls/templates/polls/index.html",
 		"/root/My-Code/django_tut/mysite/polls/urls.py",
 		"/root/My-Code/django_tut/mysite/mysite/urls.py",
 		"/root/My-Code/django_tut/mysite/mysite/settings.py",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/font-awesome.css",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/opensans.css",
 		"/root/My-Code/squash/src/static_production/static_root/squashapp/js/1.js",
 		"/root/My-Code/squash/src/squashapp/static/squashapp/js/1.js",
 		"/root/My-Code/squash/src/squashapp/static/js/1.js",
 		"/root/My-Code/squash/src/squash/settings.py",
 		"/root/My-Code/squash/Configuration.txt",
-		"/root/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/root/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
 		"/root/.config/sublime-text-3/Packages/Djaneiro/Settings/HTML (Django).sublime-settings",
 		"/root/.config/sublime-text-3/Packages/User/HTML (Django).sublime-settings",
-		"/root/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/root/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/root/My-Code/squash/squash-dev.sublime-project",
 		"/root/.config/sublime-text-3/Packages/User/polls-djangoproject.sublime-workspace",
 		"/root/My-Code/django_tut/mysite/polls/templates/polls/detail.html",
 		"/root/My-Code/django_tut/mysite/polls/templates/polls/results.html",
 		"/root/My-Code/django_tut/mysite/polls/templates/polls/choice.html",
 		"/root/My-Code/django_tut/mysite/polls/models.py",
-		"/root/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/root/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/root/My-Code/django_tut/mysite/polls/migrations/0001_initial.py",
 		"/root/My-Code/django_tut/mysite/polls/admin.py",
@@ -237,7 +281,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -251,13 +295,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"h2",
-			"squash",
-			"login",
-			"squash",
-			"blockname",
-			"../../../../",
-			"../../",
+			"20",
+			"bold",
+			"content",
+			"index",
+			"squashapp",
+			"auto",
+			"                                          ",
+			"warning",
+			"primary",
 			"tut_django",
 			"tut_djang",
 			"tut_django",
@@ -382,7 +428,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 326.0,
+	"side_bar_width": 302.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

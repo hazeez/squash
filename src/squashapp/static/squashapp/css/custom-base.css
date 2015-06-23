@@ -70,6 +70,7 @@ background-color: rgb(237,237,237);
     position: absolute;
     top: 0;
     width: 100%;
+    overflow: hidden;
 }
 #sidebar-wrapper {
     border-right: 1px solid gray;
@@ -104,17 +105,19 @@ background-color: rgb(237,237,237);
 #top-main-wrapper {
     margin-top: 55px;
 }
-.custom-right-sidebar, .custom-top-right-sidebar {
+/*.custom-right-sidebar, .custom-top-right-sidebar {
     margin-right: 4px;
-}
+}*/
 #main-wrapper {
     margin-top: 1px;
+    margin-right: -15px;
+    width: 88.6%;
 }
 .col-md-1 {
     width: 12%;
 }
 .col-md-11 {
-    width: 87.2%;
+    width: 87.5%;
 }
 ul li a {
             color: rgb(70,87,94);
@@ -150,4 +153,13 @@ ul li {
 }
 .lead {
     margin-left: -37%;
+}
+/* for wide monitors */
+@media (min-width: 1400px) {
+    #main-wrapper {
+    width: 88.4%;
+}
+.custom-top-right-sidebar{
+    width: 87.6%;
+}
 }

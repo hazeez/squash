@@ -18,8 +18,18 @@ body {
 }
 .form-title {
     margin-top: 10%;
-    margin-left: 41%;
+    margin-left: 40%;
 }
 .custom-button {
     font-weight: bold;
+}
+#main {
+    margin-left: -10%;
+}
+
+/* for wide monitors */
+@media (min-width: 1400px) {
+    .form-title {
+    margin-left:42%;
+}
 }

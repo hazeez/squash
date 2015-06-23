@@ -7,3 +7,15 @@ p a {
     color: rgb(70,87,94);
     font-size: 24px;
 }
+.lead1 {
+    padding-left:40px;
+}
+#main {
+    margin-left: -25%;
+}
+/* for wide monitors */
+@media (min-width: 1400px) {
+    .lead1 {
+    padding-left:0px;
+}
+}
