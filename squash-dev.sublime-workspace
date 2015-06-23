@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"font-",
+				"font-size"
+			],
+			[
+				"auth",
+				"auth_login"
+			],
+			[
 				"squash",
 				"squashapp"
 			],
@@ -99,25 +107,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "head\n    - css\nbody\n    - search-box\n    - greetings\n    - settings-dropdown\n    - sidebar\n    - breadcrumb\n    - content\n\n\n{% block search-box %}\n\n{% endblock search-box %}\n\n{% block greetings %}\n\n{% endblock greetings %}\n\n{% block settings-dropdown %}\n\n{% endblock settings-dropdown %}\n\n{% block sidebar %}\n\n{% endblock sidebar %}\n\n{% block breadcrumb-wrapper %}\n\n{% endblock breadcrumb-wrapper %}\n\n{% block breadcrumb %}\n\n{% endblock breadcrumb %}\n\n{% block content-wrapper %}\n\n{% endblock content-wrapper %}\n\n{% block content %}\n\n{% endblock content %}\n",
-			"file": "src/configuration/template-config.txt",
-			"file_size": 557,
-			"file_write_time": 130794387767351684,
-			"settings":
-			{
-				"buffer_size": 557,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/squashapp/templates/login.html",
-			"settings":
-			{
-				"buffer_size": 930,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -157,29 +146,53 @@
 	"expanded_folders":
 	[
 		"/root/My-Code/squash/src",
+		"/root/My-Code/squash/src/configuration",
+		"/root/My-Code/squash/src/shared_templates",
+		"/root/My-Code/squash/src/shared_templates/registration",
 		"/root/My-Code/squash/src/squashapp",
 		"/root/My-Code/squash/src/squashapp/static",
 		"/root/My-Code/squash/src/squashapp/static/squashapp",
 		"/root/My-Code/squash/src/squashapp/static/squashapp/css",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/js",
 		"/root/My-Code/squash/src/squashapp/templates",
 		"/root/My-Code/squash/src/squashproject",
-		"/root/My-Code/squash/static_production",
-		"/root/My-Code/squash/static_production/static_root/squashapp",
-		"/root/My-Code/squash/static_production/static_root/squashapp/css",
-		"/root/My-Code/squash/static_production/static_root/squashapp/js"
+		"/root/My-Code/squash/static_production"
 	],
 	"file_history":
 	[
-		"/root/My-Code/squash/src/squashproject/settings.py",
-		"/root/My-Code/squash/src/squashapp/urls.py",
-		"/root/My-Code/squash/src/squashproject/urls.py",
-		"/root/My-Code/squash/squash-dev.sublime-workspace",
-		"/root/My-Code/squash/src/squashapp/views.py",
-		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-login.css",
-		"/root/My-Code/squash/src/squashapp/templates/base.html",
-		"/root/My-Code/squash/src/squashapp/templates/home.html",
-		"/root/My-Code/squash/src/squashapp/templates/login1.html",
 		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-base.css",
+		"/root/My-Code/squash/src/shared_templates/registration/login.html",
+		"/root/My-Code/squash/src/squashapp/templates/base.html",
+		"/root/My-Code/squash/src/shared_templates/registration/activation_complete.html",
+		"/root/My-Code/squash/src/shared_templates/registration/logout.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_reset_done.html",
+		"/root/My-Code/squash/src/shared_templates/registration/registration_form.html",
+		"/root/My-Code/squash/src/shared_templates/registration/registration_complete.html",
+		"/root/My-Code/squash/src/shared_templates/registration/registration_closed.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_reset_form.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_reset_email.html",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-password-reset.css",
+		"/root/My-Code/squash/src/shared_templates/registration/password_reset_confirm.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_reset_complete.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_change_form.html",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-password-change.css",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-logout.css",
+		"/root/My-Code/squash/src/squashapp/templates/login.html",
+		"/root/My-Code/squash/src/shared_templates/registration/password_change_done.html",
+		"/root/My-Code/squash/src/shared_templates/registration/activation_email_subject.txt",
+		"/root/My-Code/squash/src/shared_templates/registration/activation_email.txt",
+		"/root/My-Code/squash/src/shared_templates/registration/activate.html",
+		"/root/My-Code/squash/src/configuration/template-config.txt",
+		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-login.css",
+		"/root/My-Code/squash/src/squashproject/settings.py",
+		"/root/My-Code/squash/src/squashapp/templates/home.html",
+		"/root/My-Code/squash/src/squashapp/templates/squashapp/base.html",
+		"/root/My-Code/squash/src/squashapp/views.py",
+		"/root/My-Code/squash/src/squashproject/urls.py",
+		"/root/My-Code/squash/src/squashapp/urls.py",
+		"/root/My-Code/Try-Django-1.8/src/trydjango18/old_settings.py",
+		"/root/My-Code/squash/squash-dev.sublime-workspace",
+		"/root/My-Code/squash/src/squashapp/templates/login1.html",
 		"/root/My-Code/squash/src/squashapp/templates/squashapp/index.html",
 		"/root/My-Code/django_tut/mysite/polls/views.py",
 		"/root/My-Code/squash/src/squashapp/static/squashapp/css/opensans.css",
@@ -241,6 +254,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h2",
 			"squash",
 			"login",
 			"squash",
@@ -282,190 +296,8 @@
 			]
 		},
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/configuration/template-config.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 557,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								399,
-								399
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"is_xml": false,
-							"open_with_edit": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/squashapp/templates/login.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 930,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								74,
-								74
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"is_xml": false,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -545,7 +377,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

@@ -44,9 +44,26 @@ body
 -------------------------------
 registration - template mapping
 -------------------------------
-{% url 'auth_login' %} - registration/login
-{% url 'auth_logout' %} - registration/logout
+{% url 'auth_login' %} - registration/login    //accounts/login
 
-{% url 'auth_password_reset' %} - registration/password_reset_form
+{% url 'auth_logout' %} - registration/logout  //accounts/logout
+
+{% url 'auth_password_reset' %} - registration/password_reset_form //accounts/password/reset
+
 {% url 'registration_register' %} - registration/registration_form
 
+
+-------------
+^accounts/ ^activate/complete/$ [name='registration_activation_complete']
+^accounts/ ^activate/(?P<activation_key>\w+)/$ [name='registration_activate']
+^accounts/ ^register/complete/$ [name='registration_complete']
+^accounts/ ^register/closed/$ [name='registration_disallowed']
+^accounts/ ^register/$ [name='registration_register']
+^accounts/ ^login/$ [name='auth_login']
+^accounts/ ^logout/$ [name='auth_logout']
+^accounts/ ^password/change/$ [name='auth_password_change']
+^accounts/ ^password/change/done/$ [name='auth_password_change_done']
+^accounts/ ^password/reset/$ [name='auth_password_reset']
+^accounts/ ^password/reset/complete/$ [name='auth_password_reset_complete']
+^accounts/ ^password/reset/done/$ [name='auth_password_reset_done']
+^accounts/ ^password/reset/confirm/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>.+)/$ [name='auth_password_reset_confirm']
