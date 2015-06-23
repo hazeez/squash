@@ -1,6 +1,25 @@
 body {
     background-color: #fff;
 }
-#main-wrapper {
+/*#main-wrapper {
+    margin-top: 12%;
+    border: 1px solid gray;
+}*/
+/*#main {
+    margin-top: 12%;
+    border: 1px solid gray;
+}
+*/
+.custom-form{
+    margin-top: 1%;
+    border: 1px solid rgb(220,220,220);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.form-title {
     margin-top: 10%;
+    margin-left: 41%;
+}
+.custom-button {
+    font-weight: bold;
 }
