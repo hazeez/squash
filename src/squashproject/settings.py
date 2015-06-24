@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from .dbemailauth import DBPASS, EMAILPASS, EMAIL_HUSER
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -30,8 +31,8 @@ ALLOWED_HOSTS = []
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_SSL = True
 EMAIL_HOST = 'stbeehive.oracle.com'
-EMAIL_HOST_USER = 'hafizul.azeez@oracle.com'
-EMAIL_HOST_PASSWORD = '5rRN8Eabc1'
+EMAIL_HOST_USER = EMAIL_HUSER
+EMAIL_HOST_PASSWORD = EMAILPASS
 EMAIL_PORT = 465
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
@@ -83,7 +84,6 @@ TEMPLATES = [
     },
 ]
 
-print TEMPLATES
 
 WSGI_APPLICATION = 'squashproject.wsgi.application'
 
@@ -105,7 +105,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': 'XE',
         'USER':'squash_dev',
-        'PASSWORD': '5rRN8Eabc',
+        'PASSWORD': DBPASS,
         'HOST':'localhost',
         'PORT':'1521',
     }
@@ -153,4 +153,3 @@ REGISTRATION_AUTO_LOGIN = True
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/home/'
 LOGIN_URL = '/accounts/login/'
-

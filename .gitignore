@@ -55,3 +55,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# DB and email password settings
+src/squashproject/.dbemailauth.py

@@ -28,6 +28,9 @@ Production Configuration
 of the server or the domain as provided in the apache server
 4. change settings.py debug settings to false
 5. change allowed hosts to ['domain.com', 'ip:port']
+6. change how to serve the static file - config static path url
+7. create a file called .dbmailauth.py within the squashproject directory and provide the values for DBPASS, EMAILPASS, EMAIL_HUSER
+
 
 
 
