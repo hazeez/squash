@@ -20,5 +20,15 @@ this process is needed in case of self hosting
 13.configure fonts url in the <<fontname.css>> file
 
 
+Production Configuration
+-------------------------
+1. create database schema
+2. change settings.py file for database schema settings
+3. login in to admin and give site name to the corresponding ip address
+of the server or the domain as provided in the apache server
+4. change settings.py debug settings to false
+5. change allowed hosts to ['domain.com', 'ip:port']
+
+
 
 

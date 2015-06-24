@@ -11,10 +11,7 @@
 	"folders":
 	[
 		{
-			"path": "src"
-		},
-		{
-			"path": "static_production"
+			"path": "."
 		}
 	],
 	"settings":
