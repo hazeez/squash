@@ -151,18 +151,17 @@
 	[
 		"/root/My-Code/squash",
 		"/root/My-Code/squash/src",
-		"/root/My-Code/squash/src/shared_templates",
-		"/root/My-Code/squash/src/shared_templates/registration",
 		"/root/My-Code/squash/src/squashapp",
-		"/root/My-Code/squash/src/squashapp/static",
 		"/root/My-Code/squash/src/squashapp/templates",
 		"/root/My-Code/squash/src/squashproject",
-		"/root/My-Code/squash/static_production",
-		"/root/My-Code/squash/static_production/static_root",
-		"/root/My-Code/squash/static_production/static_root/squashapp"
+		"/root/My-Code/squash/static_production"
 	],
 	"file_history":
 	[
+		"/root/My-Code/squash/Configuration.txt",
+		"/root/My-Code/squash/src/squashproject/wsgi.py",
+		"/root/My-Code/squash/Infra setup",
+		"/root/My-Code/squash/src/squashproject/settings.py",
 		"/root/My-Code/squash/src/squashapp/templates/base.html",
 		"/root/My-Code/squash/src/shared_templates/registration/registration_form.html",
 		"/root/My-Code/squash/src/shared_templates/registration/registration_complete.html",
@@ -183,8 +182,6 @@
 		"/root/My-Code/squash/src/squashapp/static/squashapp/css/opensans.css",
 		"/root/My-Code/squash/src/squashapp/static/squashapp/css/roboto.css",
 		"/root/My-Code/squash/src/squashapp/static/squashapp/css/custom-base.css",
-		"/root/My-Code/squash/src/squashproject/settings.py",
-		"/root/My-Code/squash/Configuration.txt",
 		"/root/My-Code/squash/.gitignore",
 		"/root/My-Code/squash/src/shared_templates/registration/activation_email_subject.txt",
 		"/root/My-Code/squash/src/shared_templates/registration/activation_email.txt",

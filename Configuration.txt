@@ -41,6 +41,12 @@ installing mod_wsgi using pip - i.e. installing mod_wsgi in python rather than o
 -------------------------------------------------------------------------
 pip install mod_wsgi
 
+install mod_wsgi directly into apache
+--------------------------------------
+yum install mod_wsgi
+then add the following line in httpd.conf file - search for loadmodules
+LoadModule wsgi_module modules/mod_wsgi.so
+
 Apache Configuration
 --------------------
 cd to /etc/httpd/conf
@@ -48,6 +54,8 @@ open http.d configuration file
 change the ip address under listen to the ip of the system
 i.e. Listen 10.180.219.50:80
 Apache wont start as root; so go to the user directive and change the user to a user other than root e.g. in this system it is hac
+change the servername in httpd.conf file to the hostname
+
 
 
 

@@ -117,7 +117,7 @@ http://www.oracle.com/technetwork/database/features/instant-client/index-097480.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'XE',cd
+        'NAME': 'XE',
         'USER':'hac',
         'PASSWORD': 'toor',
         'HOST':'localhost',
@@ -139,7 +139,7 @@ exact instructions below
     - SQL Developer will automatically launch once jdk location is provided
 
 
-#additional things for development
+#additional things for development (didnt get this to work)
 ----------------------------------
 1. node js for live reload - yum install nodejs
 2. live reload plugin for sublime text
