@@ -1,9 +1,4 @@
 {% extends "base.html" %} {% load i18n %}{% load staticfiles %} {% load crispy_forms_tags %} {% block css %}
-<link href={% static "squashapp/css/bootstrap.min.css" %} rel="stylesheet">
-<link href={% static "squashapp/css/font-awesome.min.css" %} rel="stylesheet">
-<!-- Custom styles for this template
-    TODO - #write base.css-->
-<link href={% static "squashapp/css/custom-base.css" %} rel="stylesheet">
 <link href={% static "squashapp/css/custom-login.css" %} rel="stylesheet"> {% endblock css %} {% block search-box %} {% endblock search-box %} {% block greetings %} {% endblock greetings %} {% block settings-dropdown %}
 <div class="btn-group custom-settings-button pull-right">
     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
