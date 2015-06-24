@@ -31,6 +31,24 @@ of the server or the domain as provided in the apache server
 6. change how to serve the static file - config static path url
 7. create a file called .dbmailauth.py within the squashproject directory and provide the values for DBPASS, EMAILPASS, EMAIL_HUSER
 
+Apache and mod_wsgi Install
+---------------------------
+1. yum install httpd
+2. yum install httpd-devel
+3. yum install python-devel (to compile mod_wsgi)
+
+installing mod_wsgi using pip - i.e. installing mod_wsgi in python rather than on apache directly
+-------------------------------------------------------------------------
+pip install mod_wsgi
+
+Apache Configuration
+--------------------
+cd to /etc/httpd/conf
+open http.d configuration file
+change the ip address under listen to the ip of the system
+i.e. Listen 10.180.219.50:80
+Apache wont start as root; so go to the user directive and change the user to a user other than root e.g. in this system it is hac
+
 
 
 
