@@ -77,9 +77,9 @@ e.g. 10.180.218.186 squashdev.in.oracle.com
 
 
 
-#semanage fcontext -a -t http_sys_content_t "/webapps(/.*)?"
+#semanage fcontext -a -t httpd_sys_content_t "/webapps(/.*)?"
 #STATIC ROOT - set read access
-semanage fcontext -a -t http_sys_content_t "/root/My-Code/squash/static_production/static_root(/.*)?"
+semanage fcontext -a -t httpd_sys_content_t "/root/My-Code/squash/static_production/static_root(/.*)?"
 
 #MEDIA ROOT - set write access
 #semanage fcontext -a httpd_sys_rw_content_t "/webapps/app1/public_html/uploads(/.*)?"
@@ -98,5 +98,6 @@ semanage fcontext -a -t httpd_cache_t "/root/My-Code/squash/cache(/.*)?"
 
 
 now run all the above commands as root
-
+#restorecon -Rv /webapps
+restorecon -Rv /root/My-Code/squash
 
