@@ -58,3 +58,5 @@ target/
 
 # DB and email password settings
 src/squashproject/.dbemailauth.py
+src/squashproject/dbemailauth.py
+
