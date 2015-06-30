@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-
+from .models import ProjectDatabase
 # Create your views here.
 
 
@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 # THIS IS THE USE OF THE @login_required DECORATOR
 @login_required
 def home(request):
-    context = ''
-    return render(request,'home.html',context)
+    projects = ProjectDatabase.objects.all()
+    context = {'projects':projects}
+    return render(request,'home.html', context)
 

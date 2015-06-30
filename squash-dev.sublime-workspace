@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"auto",
+				"auto_now_add	param"
+			],
+			[
+				"PROJ",
+				"PROJECT_STATUSES"
+			],
+			[
+				"project",
+				"project_types"
+			],
+			[
 				"EMA",
 				"EMAIL_HUSER"
 			],
@@ -151,15 +163,24 @@
 	[
 		"/home/hac/My-Code/squash",
 		"/home/hac/My-Code/squash/src",
+		"/home/hac/My-Code/squash/src/shared_templates",
 		"/home/hac/My-Code/squash/src/squashapp",
+		"/home/hac/My-Code/squash/src/squashapp/migrations",
 		"/home/hac/My-Code/squash/src/squashproject"
 	],
 	"file_history":
 	[
+		"/home/hac/My-Code/squash/src/squashapp/models.py",
 		"/home/hac/My-Code/squash/src/squashproject/settings.py",
+		"/home/hac/My-Code/squash/src/squashapp/admin.py",
+		"/home/hac/My-Code/squash/src/squashapp/views.py",
+		"/home/hac/My-Code/squash/src/squashapp/migrations/0001_initial.py",
+		"/home/hac/My-Code/squash/src/squashapp/migrations/__init__.py",
+		"/home/hac/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/hac/My-Code/squash/squash-dev.sublime-project",
+		"/home/hac/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/home/hac/My-Code/squash/.gitignore",
 		"/home/hac/My-Code/squash/src/squashproject/dbemailauth.py",
-		"/home/hac/My-Code/squash/squash-dev.sublime-project",
 		"/home/hac/My-Code/squash/src/db.sqlite3",
 		"/root/My-Code/squash/Configuration.txt",
 		"/root/My-Code/squash/src/squashproject/wsgi.py",
@@ -262,6 +283,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"choice",
+			"false",
+			"True",
+			"required",
+			"node",
 			"squash_app/",
 			"../static_production/static_root/",
 			"EMAIL_HOST_USER",
@@ -388,7 +414,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
