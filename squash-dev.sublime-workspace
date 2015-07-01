@@ -4,16 +4,60 @@
 		"selected_items":
 		[
 			[
+				"project",
+				"project_uid"
+			],
+			[
+				"Project",
+				"ProjectDetails	class"
+			],
+			[
+				"as",
+				"as_view"
+			],
+			[
+				"Pro",
+				"ProjectList	class"
+			],
+			[
+				"squash",
+				"squashapp	module"
+			],
+			[
+				"url",
+				"urlpatterns	module"
+			],
+			[
+				"seri",
+				"serializer_class"
+			],
+			[
+				"Retri",
+				"RetrieveUpdateDestroyAPIView	class"
+			],
+			[
+				"List",
+				"ListCreateAPIView	class"
+			],
+			[
+				"squashapp",
+				"SquashappSerializer	class"
+			],
+			[
+				"JSON",
+				"JSONResponse"
+			],
+			[
+				"csrf",
+				"csrf_exempt	function"
+			],
+			[
 				"auto",
 				"auto_now_add	param"
 			],
 			[
 				"PROJ",
 				"PROJECT_STATUSES"
-			],
-			[
-				"project",
-				"project_types"
 			],
 			[
 				"EMA",
@@ -26,10 +70,6 @@
 			[
 				"auth",
 				"auth_login"
-			],
-			[
-				"squash",
-				"squashapp"
 			],
 			[
 				"requ",
@@ -123,6 +163,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/squashapp/models.py",
+			"settings":
+			{
+				"buffer_size": 1245,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/squashapp/views.py",
+			"settings":
+			{
+				"buffer_size": 946,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/squashproject/urls.py",
+			"settings":
+			{
+				"buffer_size": 1885,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/squashapp/serializers.py",
+			"settings":
+			{
+				"buffer_size": 435,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -165,13 +237,15 @@
 		"/home/hac/My-Code/squash/src",
 		"/home/hac/My-Code/squash/src/shared_templates",
 		"/home/hac/My-Code/squash/src/squashapp",
-		"/home/hac/My-Code/squash/src/squashapp/migrations",
 		"/home/hac/My-Code/squash/src/squashproject"
 	],
 	"file_history":
 	[
-		"/home/hac/My-Code/squash/src/squashapp/models.py",
 		"/home/hac/My-Code/squash/src/squashproject/settings.py",
+		"/home/hac/My-Code/squash/src/squashproject/urls.py",
+		"/home/hac/My-Code/squash/src/squashproject/wsgi.py",
+		"/home/hac/My-Code/squash/src/squashapp/urls.py",
+		"/home/hac/My-Code/squash/src/squashapp/models.py",
 		"/home/hac/My-Code/squash/src/squashapp/admin.py",
 		"/home/hac/My-Code/squash/src/squashapp/views.py",
 		"/home/hac/My-Code/squash/src/squashapp/migrations/0001_initial.py",
@@ -328,13 +402,366 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "src/squashapp/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1245,
+								1245
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/squashapp/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								817,
+								817
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/squashproject/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1459,
+								1459
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 35.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/squashapp/serializers.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								339
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -355,18 +782,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -422,7 +842,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 326.0,
+	"side_bar_width": 208.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

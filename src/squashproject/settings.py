@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'registration',
     'debug_toolbar',
+    'rest_framework',
     # MY APPS,
     'squashapp'
 )

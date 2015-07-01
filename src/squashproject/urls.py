@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth import views as auth_views
 
+from rest_framework.urlpatterns import format_suffix_patterns
+from squashapp import views
 
 urlpatterns = [
     # for squash app
@@ -27,10 +29,19 @@ urlpatterns = [
     url(r'^$', 'squashapp.views.home', name='home'),
     url(r'^home', 'squashapp.views.home', name='home'),
 
+    # for project list and details
+    url(r'^projects/$', views.ProjectList.as_view(), name='ProjectList'),
+    url(r'^projects/(?P<project_release_name>[A-Z0-9_@$.]+)/$', views.ProjectDetails.as_view(lookup_field='project_release_name'), name='ProjectDetails'),
+
     # url(r'^accounts/login/$', auth_views.login),
     # This is an example of how to reference an inbuilt existing view in django
     # url(r'^$', auth_views.login),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
 ]
+
+
+urlpatterns = format_suffix_patterns(urlpatterns)

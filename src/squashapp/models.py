@@ -21,3 +21,6 @@ class ProjectDatabase(models.Model):
 
     def __unicode__(self):
         return self.project_release_name
+
+    class Meta:
+        ordering = ('project_updated_date',)
