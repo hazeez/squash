@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="squashapp-ng">
 
 <head>
     <meta charset="utf-8">
@@ -23,14 +23,17 @@
 
     {% endblock css %}
 
-    {% block initialjs%}
-        <script src={% static "squashapp/js/jquery.min.js" %}></script>
-        <script src={% static "squashapp/js/angular.min.js" %}></script>
-        <script src={% static "squashapp/js/angular-resource.min.js" %}></script>
-        <script src={% static "squashapp/js/angular-route.min.js" %}></script>
-        <script src={% static "squashapp/js/angular-ui-router.min.js" %}></script>
-    {% endblock initialjs%}
+    <script src={% static "squashapp/js/jquery.min.js" %}></script>
+    <script src={% static "squashapp/js/angular.min.js" %}></script>
+    <script src={% static "squashapp/js/angular-resource.min.js" %}></script>
+    <script src={% static "squashapp/js/angular-route.min.js" %}></script>
+    <script src={% static "squashapp/js/angular-ui-router.min.js" %}></script>
 
+
+    <!-- Angular JS files-->
+<script src={% static "squashapp/js/app.js" %}></script>
+<script src={% static "squashapp/js/services.js" %}></script>
+<script src={% static "squashapp/js/controller.js" %}></script>
 
     <!-- BOILER PLATE CODE BELOW -->
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -43,7 +46,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body ng-controller="ProjectListCtrl">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -109,7 +112,7 @@
                 {% block breadcrumb %}
                 <ol class="breadcrumb">
                     <li><a href="">Home</a></li>
-                    <li class="active"><a>My Dashboard</a></li>
+                    <li class="active" ui-sref-active="active"><a ui-sref="projects">My Dashboard</a></li>
                 </ol>
                 {% endblock breadcrumb %}
             </div>
@@ -123,6 +126,7 @@
 
                 <div id="main">
                 {% block content %}
+                <div ui-view></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem repellat mollitia numquam est adipisci fugiat maiores neque nulla veritatis architecto!</p>
                 {% endblock content %}
                 </div>

@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-
+    <div ui-view></div>
+<div class="project-container" ng-repeat="project in projects">
+    <div>{${project.project_release_name}$}</div>
+</div>
 
 {% endblock content %}
