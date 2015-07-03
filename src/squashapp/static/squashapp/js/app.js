@@ -1,18 +1,17 @@
-angular.module('squashapp-ng', ['ui-router',
-    'ui-state',
+angular.module('squashappng', [
+    'ui.router',
     'ngResource',
-    'squashapp-ng.services',
-    'squashapp-ng.controller'
+    'squashappng.services',
+    'squashappng.controller',
 ])
 
-.config(['', function($interpolateProvider, $httpProvider,
+.config(function($interpolateProvider, $httpProvider,
         $resourceProvider, $stateProvider, $urlRouterProvider) {
 
         // Force angular to use square brackets for template tag
     // The alternative is using {% verbatim %}
-    $interpolateProvider.startSymbol('{${');
-    $interpolateProvider.endSymbol('}$}');
-
+    $interpolateProvider.startSymbol('{$$');
+    $interpolateProvider.endSymbol('$$}');
 
     // CSRF Support
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
@@ -25,9 +24,14 @@ angular.module('squashapp-ng', ['ui-router',
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-    .state('projects', {
+    .state('projectslist', {
         url: '/',
-        templateUrl : 'home.html',
+        templateUrl : '/static/squashapp/partials/project-list.html',
+        controller: 'ProjectListCtrl',
+    })
+    .state('myprojects', {
+        url: '/:userName',
+        templateUrl : '/static/squashapp/partials/sqa-list.html',
         controller: 'ProjectListCtrl',
     });
-}]);
+});

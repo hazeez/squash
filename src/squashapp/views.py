@@ -12,9 +12,7 @@ from rest_framework import generics
 # THIS IS THE USE OF THE @login_required DECORATOR
 @login_required
 def home(request):
-    projects = ProjectDatabase.objects.all()
-    context = {'projects':projects}
-    return render(request,'home.html', context)
+    return render(request,'home.html', '')
 
 
 class ProjectList(generics.ListCreateAPIView):
@@ -23,4 +21,4 @@ class ProjectList(generics.ListCreateAPIView):
 
 class ProjectDetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = ProjectDatabase.objects.all()
-    serializer_class =  SquashappSerializer
+    serializer_class =  SquashappSerializer(queryset, many=True)

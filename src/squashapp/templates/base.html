@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en" ng-app="squashapp-ng">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -23,7 +23,7 @@
 
     {% endblock css %}
 
-    <script src={% static "squashapp/js/jquery.min.js" %}></script>
+
     <script src={% static "squashapp/js/angular.min.js" %}></script>
     <script src={% static "squashapp/js/angular-resource.min.js" %}></script>
     <script src={% static "squashapp/js/angular-route.min.js" %}></script>
@@ -31,9 +31,10 @@
 
 
     <!-- Angular JS files-->
-<script src={% static "squashapp/js/app.js" %}></script>
-<script src={% static "squashapp/js/services.js" %}></script>
-<script src={% static "squashapp/js/controller.js" %}></script>
+    <script src={% static "squashapp/js/jquery.min.js" %}></script>
+    <script src={% static "squashapp/js/app.js" %}></script>
+    <script src={% static "squashapp/js/services.js" %}></script>
+    <script src={% static "squashapp/js/controller.js" %}></script>
 
     <!-- BOILER PLATE CODE BELOW -->
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -46,7 +47,7 @@
     <![endif]-->
 </head>
 
-<body ng-controller="ProjectListCtrl">
+<body>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -111,8 +112,9 @@
             <div id="top-main">
                 {% block breadcrumb %}
                 <ol class="breadcrumb">
-                    <li><a href="">Home</a></li>
-                    <li class="active" ui-sref-active="active"><a ui-sref="projects">My Dashboard</a></li>
+                    <li ui-sref-active="active"><a ui-sref="projectslist">Home</a></li>
+                    <li ui-sref-active="active"><a ui-sref="myprojects({ userName:AuthUser})">My Dashboard</a></li>
+
                 </ol>
                 {% endblock breadcrumb %}
             </div>
@@ -122,11 +124,10 @@
         {% block content-wrapper %}
 
 
-        <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar">
-
-                <div id="main">
-                {% block content %}
+        <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar" ng-app="squashappng">
+                <div id="main" ng-controller="ProjectListCtrl">
                 <div ui-view></div>
+                {% block content %}
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem repellat mollitia numquam est adipisci fugiat maiores neque nulla veritatis architecto!</p>
                 {% endblock content %}
                 </div>
@@ -138,6 +139,16 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src={% static "squashapp/js/bootstrap.min.js" %}></script>
+    <script type="text/javascript">
+  // This allows you to access the current user id in your angular controllers.
+  angular
+      .module('squashappng.services')
+      .factory('AuthUser', function() {
+        return {
+          name: "{{ request.user }}",
+    };
+      });
+</script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 </body>

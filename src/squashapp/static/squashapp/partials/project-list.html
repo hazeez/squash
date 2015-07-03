@@ -1,0 +1,25 @@
+
+    <table class="table table-striped">
+    <tr>
+        <td>Release Name</td>
+        <td>Release ID</td>
+        <td>Type</td>
+        <td>Region</td>
+        <td>SQA Contact</td>
+        <td>Start Date</td>
+        <td>End Date</td>
+        <td>Status</td>
+    </tr>
+    <tr ng-repeat="project in projects">
+        <td>{$$ project.project_release_name$$}</td>
+        <td>{$$ project.project_uid$$}</td>
+        <td>{$$ project.project_class$$}</td>
+        <td>{$$ project.project_region$$}</td>
+        <td>{$$ project.project_primary_sqa$$}</td>
+        <td>{$$ project.project_start_date$$}</td>
+        <td>{$$ project.project_end_date$$}</td>
+        <td>{$$ project.project_status $$}</td>
+    </tr>
+</table>
+
+

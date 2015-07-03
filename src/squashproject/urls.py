@@ -31,7 +31,7 @@ urlpatterns = [
 
     # for project list and details
     url(r'^api/projects/$', views.ProjectList.as_view(), name='ProjectList'),
-    url(r'^api/projects/(?P<project_release_name>[A-Z0-9_@$.]+)/$', views.ProjectDetails.as_view(lookup_field='project_release_name'), name='ProjectDetails'),
+    url(r'^api/projects/(?P<project_primary_sqa>[a-z.]+)/$', views.ProjectDetails.as_view(lookup_field='project_primary_sqa'), name='MyProjectList'),
 
     # url(r'^accounts/login/$', auth_views.login),
     # This is an example of how to reference an inbuilt existing view in django
