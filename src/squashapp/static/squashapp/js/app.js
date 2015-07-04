@@ -31,7 +31,7 @@ angular.module('squashappng', [
     })
     .state('myprojects', {
         // url: '/:name',
-        url:'/:name',
+        url:'/:name1',
         templateUrl : '/static/squashapp/partials/sqa-list.html',
         controller: 'MyProjectsCtrl',
     });

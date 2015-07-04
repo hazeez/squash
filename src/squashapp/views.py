@@ -23,12 +23,9 @@ class MyProjectsList(generics.ListCreateAPIView): #RetrieveUpdateDestroyAPIView)
     serializer_class =  AllProjectsSerializer
     lookup_url_kwarg = "project_primary_sqa"
 
-    print serializer_class
-
     def get_queryset(self):
         sqaname = self.kwargs.get(self.lookup_url_kwarg)
         # self.sqaname = get_object_or_404(ProjectDatabase, project_primary_sqa=self.kwargs['project_primary_sqa'])
         queryset = ProjectDatabase.objects.filter(project_primary_sqa=sqaname)
-        print queryset
         return queryset
 
