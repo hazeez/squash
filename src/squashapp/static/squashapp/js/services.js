@@ -4,5 +4,10 @@
 angular.module('squashappng.services', ['ngResource'])
 .factory('Projects', function($resource){
     return $resource('/api/projects/');
+})
+.factory('MyProjects', function ($resource) {
+    // body...
+    return $resource('/api/projects/:name1');
 });
+
 

@@ -24,14 +24,14 @@
     {% endblock css %}
 
 
-    <script src={% static "squashapp/js/angular.min.js" %}></script>
-    <script src={% static "squashapp/js/angular-resource.min.js" %}></script>
-    <script src={% static "squashapp/js/angular-route.min.js" %}></script>
-    <script src={% static "squashapp/js/angular-ui-router.min.js" %}></script>
+    <script src={% static "squashapp/js/vendor/angular.min.js" %}></script>
+    <script src={% static "squashapp/js/vendor/angular-resource.min.js" %}></script>
+    <script src={% static "squashapp/js/vendor/angular-route.min.js" %}></script>
+    <script src={% static "squashapp/js/vendor/angular-ui-router.min.js" %}></script>
 
 
     <!-- Angular JS files-->
-    <script src={% static "squashapp/js/jquery.min.js" %}></script>
+    <script src={% static "squashapp/js/vendor/jquery.min.js" %}></script>
     <script src={% static "squashapp/js/app.js" %}></script>
     <script src={% static "squashapp/js/services.js" %}></script>
     <script src={% static "squashapp/js/controller.js" %}></script>
@@ -113,7 +113,7 @@
                 {% block breadcrumb %}
                 <ol class="breadcrumb">
                     <li ui-sref-active="active"><a ui-sref="projectslist">Home</a></li>
-                    <li ui-sref-active="active"><a ui-sref="myprojects({ userName:AuthUser})">My Dashboard</a></li>
+                    <li ui-sref-active="active"><a ui-sref="myprojects({ name1:AuthUser})">My Dashboard</a></li>
 
                 </ol>
                 {% endblock breadcrumb %}
@@ -123,9 +123,8 @@
 
         {% block content-wrapper %}
 
-
         <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar" ng-app="squashappng">
-                <div id="main" ng-controller="ProjectListCtrl">
+                <div id="main" >
                 <div ui-view></div>
                 {% block content %}
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem repellat mollitia numquam est adipisci fugiat maiores neque nulla veritatis architecto!</p>
@@ -138,14 +137,14 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src={% static "squashapp/js/bootstrap.min.js" %}></script>
+    <script src={% static "squashapp/js/vendor/bootstrap.min.js" %}></script>
     <script type="text/javascript">
   // This allows you to access the current user id in your angular controllers.
   angular
       .module('squashappng.services')
       .factory('AuthUser', function() {
         return {
-          name: "{{ request.user }}",
+          sqaname: "{{ request.user }}",
     };
       });
 </script>

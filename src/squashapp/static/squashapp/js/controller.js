@@ -8,13 +8,11 @@ squashControllers.controller('ProjectListCtrl', function ProjectListCtrl($scope,
     });
 });
 
-squashControllers.controller('MyProjectsCtrl', function MyProjectsCtrl($scope, Projects, User, AuthUser){
-    $scope.projects = {};
-    name = AuthUser.name;
-    User.get({
-        name: name
-    }, function(response){
-        $scope.user = response;
-        $scope.projects = response.projects;
+squashControllers.controller('MyProjectsCtrl', function MyProjectsCtrl($scope, Projects, MyProjects, AuthUser){
+    $scope.sqaprojects = {};
+    sqaname = AuthUser.sqaname;
+    MyProjects.query({name1:sqaname}, function(response){
+        $scope.sqaprojects = response;
     });
+
 });

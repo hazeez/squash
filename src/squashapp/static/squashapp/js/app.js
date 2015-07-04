@@ -30,8 +30,9 @@ angular.module('squashappng', [
         controller: 'ProjectListCtrl',
     })
     .state('myprojects', {
-        url: '/:userName',
+        // url: '/:name',
+        url:'/:name',
         templateUrl : '/static/squashapp/partials/sqa-list.html',
-        controller: 'ProjectListCtrl',
+        controller: 'MyProjectsCtrl',
     });
 });
