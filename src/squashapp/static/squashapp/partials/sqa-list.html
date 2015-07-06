@@ -17,8 +17,8 @@
         <td>{$$ project.project_class$$}</td>
         <td>{$$ project.project_region$$}</td>
         <td>{$$ project.project_primary_sqa$$}</td>
-        <td>{$$ project.project_start_date$$}</td>
-        <td>{$$ project.project_end_date$$}</td>
+        <td>{$$ project.project_start_date | date $$}</td>
+        <td>{$$ project.project_end_date | date $$}</td>
         <td>{$$ project.project_status $$}</td>
     </tr>
 </table>
