@@ -35,7 +35,18 @@
     <script src={% static "squashapp/js/app.js" %}></script>
     <script src={% static "squashapp/js/services.js" %}></script>
     <script src={% static "squashapp/js/controller.js" %}></script>
-
+    <script text="type/javascript">
+//         function checkFirstVisit() {
+//   if(document.cookie.indexOf('mycookie')==-1) {
+//     // cookie doesn't exist, create it now
+//     document.cookie = 'mycookie=1';
+//   }
+//   else {
+//     // not first visit, so alert
+//     alert('You refreshed!');
+//   }
+// }
+    </script>
     <!-- BOILER PLATE CODE BELOW -->
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -57,7 +68,7 @@
             {% block search-box %}
                 <div class="form-search custom-search-form col-md-3 col-md-offset-4 ">
                 <form class="navbar-form">
-                    <input type="text" class="form-control custom-search-box" placeholder="Search...">
+                    <input type="text" class="form-control custom-search-box" placeholder="Search..." ng-model="searchText">
                     <button type="submit" class="btn btn-danger custom-btn-go"><i class="fa fa-search"></i></button>
                 </form>
             </div>
@@ -112,8 +123,8 @@
             <div id="top-main">
                 {% block breadcrumb %}
                 <ol class="breadcrumb">
-                    <li ui-sref-active="active"><a ui-sref="projectslist">Home</a></li>
-                    <li ui-sref-active="active"><a ui-sref="myprojects({name1:AuthUser})">My Dashboard</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li ><a >My Dashboard</a></li>
 
                 </ol>
                 {% endblock breadcrumb %}
@@ -124,7 +135,16 @@
         {% block content-wrapper %}
 
         <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar" >
+
                 <div id="main" >
+                {% block navtabs %}
+                    <ul class="nav nav-tabs">
+                          <li class="active" ui-sref-active="active"><a ui-sref="projectslist">All Projects</a></li>
+                          <li ui-sref-active="active"><a ui-sref="myprojects({name1:AuthUser})">My Projects</a></li>
+                          <li><a href="#">Region Projects</a></li>
+                    </ul>
+                {% endblock navtabs %}
+
                 <div ui-view></div>
                 {% block content %}
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem repellat mollitia numquam est adipisci fugiat maiores neque nulla veritatis architecto!</p>
@@ -133,6 +153,8 @@
 
         </div>
         {% endblock content-wrapper %}
+
+        <h3>"{{ project.project_region }}"</h3>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -147,6 +169,9 @@
           sqaname: "{{ request.user }}",
     };
       });
+
+
+
 </script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->

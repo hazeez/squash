@@ -1,5 +1,4 @@
 /*base.css - custom base file for base.html*/
-
 /* Default colors
 
 oracle default text = rgb(70,87,94)
@@ -12,24 +11,27 @@ oracle default table-header = rgb(176,195,200)
 oracle hover color = rgb(138,19,59)
 */
 
-
 body {
-    background-color: rgb(141,166,177);
+    background-color: rgb(141, 166, 177);
     font-family: "Open Sans", Arial, sans-serif;
-    color: rgb(70,87,94);
-    font-size:12px;
+    color: rgb(70, 87, 94);
+    font-size: 12px;
 }
-.navbar, .navbar-default, .sidebar {
-background-color: rgb(237,237,237);
+
+.navbar,
+.navbar-default,
+.sidebar {
+    background-color: rgb(237, 237, 237);
 }
+
 .navbar-brand {
     padding-left: 50px;
     font-size: 24px;
 }
-.navbar-default .navbar-header .navbar-brand  {
-    color: rgb(70,87,94);
-}
 
+.navbar-default .navbar-header .navbar-brand {
+    color: rgb(70, 87, 94);
+}
 /*.custom-btn-go {
     margin-left: -8px;
     background-color: rgb(138,19,59);
@@ -41,27 +43,34 @@ background-color: rgb(237,237,237);
     border: 1px solid rgb(248,0,0);
     color: #FFF;
 }*/
-.custom-btn-go{
-    margin-left:-8px;
+
+.custom-btn-go {
+    margin-left: -8px;
 }
 
 .custom-welcome-user {
     margin-top: 17px;
 }
+
 .custom-settings-button {
     margin-top: 10px;
     margin-left: 3%;
 }
+
 .custom-settings-dropdown {
-    font-size:12px;
+    font-size: 12px;
     margin-left: -100px;
 }
-.custom-left-sidebar, .custom-right-sidebar {
+
+.custom-left-sidebar,
+.custom-right-sidebar {
     margin-left: 6px;
     margin-top: 55px;
     /*background-color: rgb(237,237,237);*/
+
     background-color: #fff;
 }
+
 #wrapper {
     display: inline-block;
     height: 100%;
@@ -72,94 +81,135 @@ background-color: rgb(237,237,237);
     width: 100%;
     overflow: hidden;
 }
+
 #sidebar-wrapper {
     border-right: 1px solid gray;
     height: 100%;
-    padding: 0 0 0 ;
+    padding: 0 0 0;
     position: fixed;
     margin-bottom: 10px;
 }
+
 #sidebar {
     height: 100%;
     overflow-y: auto;
     position: relative;
 }
-#main-wrapper, #top-main-wrapper {
-    float:right;
+
+#main-wrapper,
+#top-main-wrapper {
+    float: right;
     height: 100%;
     overflow-y: auto;
     background-color: #fff;
 }
-#main, #top-main {
+
+#main,
+#top-main {
     height: 100%;
     overflow-y: auto;
     padding-top: 10px;
     position: relative;
 }
 
-#top-main-wrapper, #top-main {
+#top-main-wrapper,
+#top-main {
     height: auto;
     overflow-y: hidden;
     position: relative;
 }
+
 #top-main-wrapper {
     margin-top: 55px;
 }
 /*.custom-right-sidebar, .custom-top-right-sidebar {
     margin-right: 4px;
 }*/
+
 #main-wrapper {
     margin-top: 1px;
     margin-right: -15px;
     width: 88.6%;
 }
+
 .col-md-1 {
     width: 12%;
 }
+
 .col-md-11 {
     width: 87.5%;
 }
+
 ul li a {
-            color: rgb(70,87,94);
-        }
+    color: rgb(70, 87, 94);
+}
+
 ul li {
     list-style-type: none;
 }
+
 .custom-sub-list {
     margin-left: -10px;
     padding-top: 5px;
 }
+
 .custom-main-list {
     font-weight: bold;
-    font-size:13px;
+    font-size: 12px;
     padding-top: 5px;
 }
+
 .second-item {
     padding-top: 10px;
 }
-.breadcrumb{
+
+.breadcrumb {
     background-color: #fff;
     margin: -5px 0 5px -15px;
-
 }
-.breadcrumb li a{
+
+.breadcrumb li a {
     /*color: rgb(70,87,94);*/
+
     color: #C9302C;
     ltext-decoration: underline;
 }
-.breadcrumb li a:active{
+
+.breadcrumb li a:active {
     /*color: rgb(70,87,94);*/
+
     color: #C9302C;
 }
+
 .lead {
     margin-left: -37%;
 }
 /* for wide monitors */
+
 @media (min-width: 1400px) {
     #main-wrapper {
-    width: 88.4%;
+        width: 88.4%;
+    }
+    .custom-top-right-sidebar {
+        width: 87.6%;
+    }
 }
-.custom-top-right-sidebar{
-    width: 87.6%;
+/*for nav tabs*/
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #555555;
+    background-color: #f9f9f9;
+    outline: 0;
+    font-weight: 700;
+    font-size:12px;
+    border-bottom: none;
 }
+.custom-table-header {
+    font-weight: 700;
+    font-size:12px;
+}
+.filtered-rows {
+    color: #C9302C;
 }
