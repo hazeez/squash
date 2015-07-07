@@ -26,12 +26,12 @@ urlpatterns = [
     # name will be referenced in the templates as
     # <a href="{% url 'login' %}"></a><
     # url(r'^$', 'squashapp.views.login', name='login'),
-    url(r'^$', 'squashapp.views.home', name='home'),
-    url(r'^home', 'squashapp.views.home', name='home'),
+    # url(r'^$', 'squashapp.views.home', name='home'),
+    # url(r'^home', 'squashapp.views.home', name='home'),
 
     # for project list and details
-    url(r'^api/projects/$', views.ProjectList.as_view(), name='ProjectList'),
-    url(r'^api/projects/(?P<project_primary_sqa>[a-z.]+)/$', views.MyProjectsList.as_view(), name='MyProjectList'),
+    # url(r'^api/projects/$', views.ProjectList.as_view(), name='ProjectList'),
+    # url(r'^api/projects/(?P<project_primary_sqa>[a-z.]+)/$', views.MyProjectsList.as_view(), name='MyProjectList'),
 
     # url(r'^accounts/login/$', auth_views.login),
     # This is an example of how to reference an inbuilt existing view in django

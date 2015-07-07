@@ -1,0 +1,19 @@
+    <div ng-init="group = (regionprojects | groupBy:'project_region')">
+    <div ng-repeat="m in group">
+        <b>
+            <input type="checkbox" ng-model="regions[$index]"/> {$$ m $$}
+        </b>
+    </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div>
+        <ul>
+            <li ng-repeat="project in regionprojects | filter: filterRegions()">
+                <p>
+                    {$$ project.project_region $$} - {$$ project.project_release_name$$}
+                </p>
+
+            </li>
+        </ul>
+    </div>
+
