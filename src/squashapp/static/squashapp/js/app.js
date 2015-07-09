@@ -3,6 +3,7 @@ angular.module('squashappng', [
     'ngResource',
     'squashappng.services',
     'squashappng.controller',
+    'squashappng.filter',
 ])
 
 .config(function($interpolateProvider, $httpProvider,
@@ -24,15 +25,25 @@ angular.module('squashappng', [
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-    .state('projectslist', {
-        url: '/',
-        templateUrl : '/static/squashapp/partials/project-list.html',
-        controller: 'ProjectListCtrl',
-    })
+    .state('regionprojects', {
+        // url: '/:name',
+        url:'/regionprojects',
+        templateUrl : '/static/squashapp/partials/region-projects.html',
+        controller: 'RegionProjectsCtrl',
+    });
+    $stateProvider
     .state('myprojects', {
         // url: '/:name',
         url:'/:name1',
         templateUrl : '/static/squashapp/partials/sqa-list.html',
         controller: 'MyProjectsCtrl',
+    })
+    .state('projectslist', {
+        url: '/',
+        templateUrl : '/static/squashapp/partials/project-list.html',
+        controller: 'ProjectListCtrl',
     });
+
 });
+
+

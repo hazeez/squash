@@ -29,12 +29,16 @@
     <script src={% static "squashapp/js/vendor/angular-route.min.js" %}></script>
     <script src={% static "squashapp/js/vendor/angular-ui-router.min.js" %}></script>
     <script src={% static "squashapp/js/vendor/jquery.min.js" %}></script>
+    <script src={% static "squashapp/js/json2.js" %}></script>
+    <script src={% static "squashapp/js/underscore.js" %}></script>
 
     <!-- Angular JS files-->
 
     <script src={% static "squashapp/js/app.js" %}></script>
     <script src={% static "squashapp/js/services.js" %}></script>
+    <script src={% static "squashapp/js/filter.js" %}></script>
     <script src={% static "squashapp/js/controller.js" %}></script>
+
     <script text="type/javascript">
 //         function checkFirstVisit() {
 //   if(document.cookie.indexOf('mycookie')==-1) {
@@ -136,12 +140,13 @@
 
         <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar" >
 
-                <div id="main" >
+                <div id="main">
+
                 {% block navtabs %}
                     <ul class="nav nav-tabs">
-                          <li class="active" ui-sref-active="active"><a ui-sref="projectslist">All Projects</a></li>
+                          <li ui-sref-active="active"> <a ui-sref="projectslist">All Projects</a></li>
                           <li ui-sref-active="active"><a ui-sref="myprojects({name1:AuthUser})">My Projects</a></li>
-                          <li><a href="#">Region Projects</a></li>
+                          <li ui-sref-active="active"><a ui-sref="regionprojects">Region Projects</a></li>
                     </ul>
                 {% endblock navtabs %}
 
@@ -178,3 +183,4 @@
 </body>
 
 </html>
+

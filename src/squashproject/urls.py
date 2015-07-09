@@ -31,6 +31,7 @@ urlpatterns = [
 
     # for project list and details
     url(r'^api/projects/$', views.ProjectList.as_view(), name='ProjectList'),
+    url(r'^api/projects1/$', views.ProjectList1.as_view(), name='ProjectList1'),
     url(r'^api/projects/(?P<project_primary_sqa>[a-z.]+)/$', views.MyProjectsList.as_view(), name='MyProjectList'),
 
     # url(r'^accounts/login/$', auth_views.login),
