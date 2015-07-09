@@ -1,20 +1,15 @@
 
-    <div ng-init="group = (regionalprojects | groupBy:'project_region')" style="width:100%">
-    <h4>Pick a region</h4>
-        <div ng-repeat="m in group track by $index" style="width:100px; float:left;">
-            <h4>Pick a html</h4>
-            <b><input type="checkbox" ng-model="regions[$index]"/>{$$ m $$}</b>
-        </div>
-    </div>
-    <div style="clear:both;"></div>
-    <div>
-        <ul>
-            <li ng-repeat="project in regionalprojects track by $index| filter:filterRegions()">
-                <p><b>{$$project.project_region$$} - {$$project.project_release_name$$}</b></p>
-            </li>
-        </ul>
-    </div>
+    <!-- <div ng-controller="RegionProjectsCtrl"> -->
+<div ng-repeat="group in uniquegroupregionalprojects">
+    <b><input type="checkbox" ng-model="regions[$index]"/> {$$ group $$}</b>
+</div>
+<div style="clear:both;"></div>
+<div>
+    <ul>
 
-
-
-
+        <li ng-repeat="project in regionalprojects | filter: filterRegions()">
+            <p><b>{$$project.project_release_name$$} - {$$project.project_region$$}</b></p>
+        </li>
+    </ul>
+</div>
+<!-- </div> -->

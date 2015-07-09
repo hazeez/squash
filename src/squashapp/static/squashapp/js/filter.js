@@ -12,7 +12,7 @@ var uniqueItems = function (data, key) {
 };
 
 angular.module('squashappng.filter',['squashappng.controller'])
-.filter('groupBy',
+.filter('groupBy1',
             function () {
                 return function (collection, key) {
                     if (collection === null) return;
