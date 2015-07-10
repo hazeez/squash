@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from squashapp.models import ProjectDatabase
-from squashapp.serializers import AllProjectsSerializer
+from squashapp.serializers import AllProjectsSerializer, RegionalProjectsSerializer
 from rest_framework import generics
 # Create your views here.
 
@@ -15,9 +15,13 @@ def home(request):
     return render(request,'home.html', '')
 
 
-class ProjectList(generics.ListCreateAPIView):
+class ProjectList(generics.ListAPIView):
     queryset = ProjectDatabase.objects.all()
     serializer_class = AllProjectsSerializer
+
+class ProjectList1(generics.ListAPIView):
+    queryset = ProjectDatabase.objects.all()
+    serializer_class = RegionalProjectsSerializer
 
 class MyProjectsList(generics.ListCreateAPIView): #RetrieveUpdateDestroyAPIView):
     serializer_class =  AllProjectsSerializer

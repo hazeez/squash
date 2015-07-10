@@ -1,5 +1,7 @@
-var uniqueRegions = function(data, key) {
-    var result = new Array();
+
+var uniqueItems = function (data, key) {
+    var result = [];
+
     for (var i = 0; i < data.length; i++) {
         var value = data[i][key];
 
@@ -10,10 +12,13 @@ var uniqueRegions = function(data, key) {
     return result;
 };
 
-angular.module('squashappng.filter', []).filter('groupBy',
-    function() {
-        return function(collection, key) {
-            if (collection === null) return;
-            return uniqueRegions(collection, key);
+
+angular.module('squashappng.filter',['squashappng.controller'])
+.filter('groupBy1',
+            function () {
+                return function (collection, key) {
+                    if (collection === null) return;
+                    return uniqueItems(collection, key);
+
         };
     });
