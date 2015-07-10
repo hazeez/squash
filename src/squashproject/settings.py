@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-# from .dbemailauth import DBPASS, EMAILPASS, EMAIL_HUSER
+from .dbemailauth import DBPASS, EMAILPASS, EMAIL_HUSER
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -31,10 +31,10 @@ ALLOWED_HOSTS = []
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_SSL = True
 EMAIL_HOST = 'stbeehive.oracle.com'
-# EMAIL_HOST_USER = EMAIL_HUSER
-# EMAIL_HOST_PASSWORD = EMAILPASS
+EMAIL_HOST_USER = EMAIL_HUSER
+EMAIL_HOST_PASSWORD = EMAILPASS
 EMAIL_PORT = 465
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Application definition
 
