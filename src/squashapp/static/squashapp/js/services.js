@@ -10,7 +10,7 @@ angular.module('squashappng.services', ['ngResource'])
     return $resource('/api/projects/:name1/');
 })
 .factory('RegionProjects', function($resource){
-    return $resource('/api/projects1/');
+    return $resource('/api/projects/');
 });
 
 

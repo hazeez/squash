@@ -1,15 +1,43 @@
 
-    <!-- <div ng-controller="RegionProjectsCtrl"> -->
-<div ng-repeat="group in uniquegroupregionalprojects">
-    <b><input type="checkbox" ng-model="regions[$index]"/> {$$ group $$}</b>
-</div>
-<div style="clear:both;"></div>
-<div>
-    <ul>
+    <h4>Pick a Region</h4>
+    <div ng-init="uniquegroups" style="width:100%">
+        <div ng-repeat="group in uniquegroups"   style="width:100px; float:left;">
+            <b><input type="checkbox" ng-model="regions[$index]"/>{$$ group $$}
+            </b>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+    <br/>
+    <table class="table table-striped">
+    <tr class='custom-table-header'>
+        <td>No</td>
+        <td>Release Name</td>
+        <td>Release ID</td>
+        <td>Type</td>
+        <td>Region</td>
+        <td>SQA Contact</td>
+        <td>Start Date</td>
+        <td>End Date</td>
+        <td>Status</td>
+    </tr>
+    <tr ng-repeat="project in regionalprojects | filter: filterRegions()" >
+        <td>{$$ $index+1 $$}</td>
+        <td>{$$ project.project_release_name$$}</td>
+        <td>{$$ project.project_uid$$}</td>
+        <td>{$$ project.project_class$$}</td>
+        <td>{$$ project.project_region$$}</td>
+        <td>{$$ project.project_primary_sqa$$}</td>
+        <td>{$$ project.project_start_date | date $$}</td>
+        <td>{$$ project.project_end_date | date $$}</td>
+        <td>{$$ project.project_status $$}</td>
+    </tr>
+</table>
 
-        <li ng-repeat="project in regionalprojects | filter: filterRegions()">
-            <p><b>{$$project.project_release_name$$} - {$$project.project_region$$}</b></p>
-        </li>
-    </ul>
-</div>
-<!-- </div> -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

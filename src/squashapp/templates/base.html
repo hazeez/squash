@@ -140,7 +140,9 @@
 
         <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar" >
 
-                <div id="main">
+                <div id="main" ng-controller="{% block ngcontrol %}
+                        ProjectListCtrl
+                {% endblock ngcontrol %}">
 
                 {% block navtabs %}
                     <ul class="nav nav-tabs">
