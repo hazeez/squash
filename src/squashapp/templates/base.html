@@ -19,35 +19,19 @@
     TODO - #write base.css-->
     <link href={% static "squashapp/css/custom-base.css" %} rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    {% block css %}
-
-    {% endblock css %}
-
-
+    {% block css %} {% endblock css %}
     <script src={% static "squashapp/js/vendor/angular.min.js" %}></script>
     <script src={% static "squashapp/js/vendor/angular-resource.min.js" %}></script>
     <script src={% static "squashapp/js/vendor/angular-route.min.js" %}></script>
     <script src={% static "squashapp/js/vendor/angular-ui-router.min.js" %}></script>
     <script src={% static "squashapp/js/vendor/jquery.min.js" %}></script>
     <script src={% static "squashapp/js/vendor/underscore.js" %}></script>
-
     <!-- Angular JS files-->
-
     <script src={% static "squashapp/js/app.js" %}></script>
     <script src={% static "squashapp/js/services.js" %}></script>
     <script src={% static "squashapp/js/controller.js" %}></script>
-
     <script text="type/javascript">
-//         function checkFirstVisit() {
-//   if(document.cookie.indexOf('mycookie')==-1) {
-//     // cookie doesn't exist, create it now
-//     document.cookie = 'mycookie=1';
-//   }
-//   else {
-//     // not first visit, so alert
-//     alert('You refreshed!');
-//   }
-// }
+        // function checkFirstVisit() { // if(document.cookie.indexOf('mycookie')==-1) { // // cookie doesn't exist, create it now // document.cookie = 'mycookie=1'; // } // else { // // not first visit, so alert // alert('You refreshed!'); // } // }
     </script>
     <!-- BOILER PLATE CODE BELOW -->
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -60,7 +44,7 @@
     <![endif]-->
 </head>
 
-<body {% block ngapp %} ng-app="squashappng" {% endblock ngapp %}>
+<body ng-app="squashappng">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -68,24 +52,22 @@
                 </a>
             </div>
             {% block search-box %}
-                <div class="form-search custom-search-form col-md-3 col-md-offset-4 ">
+            <div class="form-search custom-search-form col-md-3 col-md-offset-4 ">
                 <form class="navbar-form">
                     <input type="text" class="form-control custom-search-box" placeholder="Search..." ng-model="searchText">
                     <button type="submit" class="btn btn-danger custom-btn-go"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            {% endblock search-box %}
-            {% block greetings %}
-                <div class="col-md-3 custom-welcome-user ">
+            {% endblock search-box %} {% block greetings %}
+            <div class="col-md-3 custom-welcome-user ">
                 <p class="pull-right">
                     User: {{request.user}}
                 </p>
             </div>
             {% endblock greetings %}
-
             <!-- Single button -->
             {% block settings-dropdown %}
-                <div class="btn-group custom-settings-button pull-right">
+            <div class="btn-group custom-settings-button pull-right">
                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-bars"></i>
                 </button>
@@ -96,12 +78,11 @@
                 </ul>
             </div>
             {% endblock settings-dropdown %}
-
         </div>
     </nav>
     <div id="wrapper">
         {% block sidebar %}
-            <div id="sidebar-wrapper" class="col-md-1 custom-left-sidebar">
+        <div id="sidebar-wrapper" class="col-md-1 custom-left-sidebar">
             <div id="sidebar">
                 <ul class="nav">
                     <li class="custom-main-list">
@@ -119,46 +100,37 @@
                 </ul>
             </div>
         </div>
-        {% endblock sidebar %}
-        {% block breadcrumb-wrapper %}
+        {% endblock sidebar %} {% block breadcrumb-wrapper %}
         <div id="top-main-wrapper" class="col-md-11 pull-right custom-top-right-sidebar">
             <div id="top-main">
                 {% block breadcrumb %}
                 <ol class="breadcrumb">
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li ><a >My Dashboard</a></li>
-
+                    <li><a>My Dashboard</a></li>
                 </ol>
                 {% endblock breadcrumb %}
             </div>
         </div>
-        {% endblock breadcrumb-wrapper %}
-
-        {% block content-wrapper %}
-
-        <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar" >
-
-                <div id="main" ng-controller="{% block ngcontrol %}
+        {% endblock breadcrumb-wrapper %} {% block content-wrapper %}
+        <div id="main-wrapper" class="col-md-11 pull-right custom-right-sidebar">
+            <div id="main" ng-controller="{% block ngcontrol %}
                         ProjectListCtrl
                 {% endblock ngcontrol %}">
-
                 {% block navtabs %}
-                    <ul class="nav nav-tabs">
-                          <li ui-sref-active="active"> <a ui-sref="projectslist">All Projects</a></li>
-                          <li ui-sref-active="active"><a ui-sref="myprojects({name1:AuthUser})">My Projects</a></li>
-                          <li ui-sref-active="active"><a ui-sref="regionprojects">Region Projects</a></li>
-                    </ul>
-                {% endblock navtabs %}
+                <ul class="nav nav-tabs">
+                    <li ui-sref-active="active"> <a ui-sref="projectslist">All Projects</a></li>
+                    <li ui-sref-active="active"><a ui-sref="myprojects({name1:AuthUser})">My Projects</a></li>
+                    <li ui-sref-active="active"><a ui-sref="regionprojects">Region Projects</a></li>
 
+                </ul>
+                {% endblock navtabs %}
                 <div ui-view></div>
                 {% block content %}
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem repellat mollitia numquam est adipisci fugiat maiores neque nulla veritatis architecto!</p>
                 {% endblock content %}
-                </div>
-
+            </div>
         </div>
         {% endblock content-wrapper %}
-
         <h3>"{{ project.project_region }}"</h3>
     </div>
     <!-- Bootstrap core JavaScript
@@ -166,21 +138,17 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src={% static "squashapp/js/vendor/bootstrap.min.js" %}></script>
     <script type="text/javascript">
-  // This allows you to access the current user id in your angular controllers.
-  angular
-      .module('squashappng.services')
-      .factory('AuthUser', function() {
-        return {
-          sqaname: "{{ request.user }}",
-    };
-      });
-
-
-
-</script>
+    // This allows you to access the current user id in your angular controllers.
+    angular
+        .module('squashappng.services')
+        .factory('AuthUser', function() {
+            return {
+                sqaname: "{{ request.user }}",
+            };
+        });
+    </script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 </body>
 
 </html>
-

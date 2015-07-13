@@ -87,17 +87,18 @@ class ProjectDatabase(models.Model):
     BUGTOOLS = (('JIRA','JIRA'),('BUGZ','BUGZ'),('CUST','CUST'))
 
     project_release_name = models.CharField(max_length=30, blank=False, primary_key=True)
-    project_uid = models.CharField(max_length=15, blank=False)
+    project_uid = models.CharField(max_length=15, blank=False, default="0")
     project_customer_name = models.CharField(max_length=40, blank=True, default="My Bank")
     project_class = models.CharField(max_length=3, blank=False, choices=PROJECT_TYPES, default="IUT")
     project_products = models.CharField(max_length=15, blank=False, choices=PRODUCTS, default="FCUBS")
     project_base_version = models.CharField(max_length=30, blank=False, default="No base")
     project_total_effort = models.IntegerField(default=0,blank=True)
+    project_base_effort = models.IntegerField(default=0,blank=True)
     project_cut_effort = models.IntegerField(default=0,blank=True)
     project_testing_effort = models.IntegerField(default=0,blank=True)
     project_cob_effort = models.IntegerField(default=0,blank=True)
     project_status = models.CharField(max_length=9, blank=False, choices=PROJECT_STATUSES, default="ONG")
-    project_manager = models.CharField(max_length=40, blank=True)
+    project_manager = models.CharField(max_length=40, blank=True, default="PM Name")
     project_backup_manager = models.CharField(max_length=40, blank=True, default="No Manager")
     project_managed_by = models.CharField(max_length=3, default="SQA", choices = MANAGEDBY)
     project_primary_sqa = models.CharField(max_length=30, choices = SQANAMES, default="PM")
@@ -109,19 +110,19 @@ class ProjectDatabase(models.Model):
     project_methodology = models.CharField(max_length=4, default="PRLC", choices = METHODS)
     project_created_date = models.DateTimeField(auto_now_add=True, auto_now=False)
     project_updated_date = models.DateTimeField(auto_now=True, auto_now_add=False)
-    project_start_date = models.DateField(blank=True,help_text="Please use the following format: <em>YYYY-MM-DD</em>.")
-    project_end_date = models.DateField(blank=True, help_text="Please use the following format: <em>YYYY-MM-DD</em>.")
-    project_duration = models.IntegerField(blank=True)
-    project_description = models.TextField(max_length=1000, blank=True)
+    project_start_date = models.DateField(blank=True,help_text="Please use the following format: <em>YYYY-MM-DD</em>.", default="1978-01-01")
+    project_end_date = models.DateField(blank=True, help_text="Please use the following format: <em>YYYY-MM-DD</em>.", default="1978-01-01")
+    project_duration = models.IntegerField(blank=True, default=0)
+    project_description = models.TextField(max_length=1000, blank=True, default="None")
     project_scm_tool = models.CharField(max_length=3, default="SVN", choices=SCMTOOLS)
-    project_scm_path = models.CharField(max_length=200, blank=True)
-    project_soft_path = models.CharField(max_length=200, blank=True)
+    project_scm_path = models.CharField(max_length=200, blank=True, default="path here")
+    project_soft_path = models.CharField(max_length=200, blank=True, default="path here")
     project_bug_tool = models.CharField(max_length=4, default="JIRA", choices = BUGTOOLS)
-    project_released_date = models.DateField(blank=True, null=True, help_text="Please use the following format: <em>YYYY-MM-DD</em>.")
+    project_released_date = models.DateField(blank=True, null=True, help_text="Please use the following format: <em>YYYY-MM-DD</em>.",default="1978-01-01")
     project_release_status = models.CharField(max_length=10, blank=False, choices=RELEASE_STATUSES, default="PKOM")
 
     def __unicode__(self):
-        return self.project_release_name , self.project_uid
+        return self.project_release_name + " >> " +self.project_uid
 
     class Meta:
         ordering = ('project_status',)
@@ -129,7 +130,7 @@ class ProjectDatabase(models.Model):
 class ProjectReviewDetails(models.Model):
     CHOICES = list((x.choice_code, x.choice_alias)for x in OptionChoice.objects.all())
 
-    release_name = models.ForeignKey(ProjectDatabase)
+    release = models.ForeignKey(ProjectDatabase)
 
     # PKOM Details
     pkom_applicable = models.CharField(max_length=3, default="No", choices=CHOICES)
@@ -139,6 +140,9 @@ class ProjectReviewDetails(models.Model):
     pkom_completed = models.BooleanField(default=False)
 
     #milestones
+    plans_date = models.DateField(blank=True, default="1978-01-01")
+    fs_date = models.DateField(blank=True, default="1978-01-01")
+    ds_date = models.DateField(blank=True, default="1978-01-01")
     cut_start_date = models.DateField(blank=True, default="1978-01-01")
     cut_end_date = models.DateField(blank=True, default="1978-01-01")
     iut_start_date = models.DateField(blank=True, default="1978-01-01")
@@ -199,7 +203,7 @@ class ProjectReviewDetails(models.Model):
     utp_applicable = models.CharField(choices=CHOICES, max_length=3, default="No")
     utp_done_by_testing_team = models.BooleanField(default=False)
     utp_rounds = models.IntegerField(default=0)
-    applicable_utp_documents = models.IntegerField(blank=True)
+    applicable_utp_documents = models.IntegerField(blank=True, default=0)
     utp_peer_reviewed = models.BooleanField(default=False)
     utp_qmg_reviewed = models.BooleanField(default=False)
     utp_baselined = models.BooleanField(default=False)
@@ -315,11 +319,11 @@ class ProjectReviewDetails(models.Model):
     #ITR2 Bugs
     itr2_bug_report_obtained = models.BooleanField(default=False)
     itr2_bug_report_baselined = models.BooleanField(default=False)
-    itr2_total_bugs = models.IntegerField(blank=True)
-    itr2_atype_bugs = models.IntegerField(blank=True)
-    itr2_btype_bugs = models.IntegerField(blank=True)
-    itr2_ctype_bugs = models.IntegerField(blank=True)
-    itr2_dtype_bugs = models.IntegerField(blank=True)
+    itr2_total_bugs = models.IntegerField(blank=True, default=0)
+    itr2_atype_bugs = models.IntegerField(blank=True, default=0)
+    itr2_btype_bugs = models.IntegerField(blank=True, default=0)
+    itr2_ctype_bugs = models.IntegerField(blank=True, default=0)
+    itr2_dtype_bugs = models.IntegerField(blank=True, default=0)
     itr2_bugs_closed = models.BooleanField(default=False)
     itr2_open_bug_details = models.TextField(max_length=200, blank=True)
     itr2_rca_done = models.BooleanField(default=False)
@@ -353,4 +357,4 @@ class ProjectReviewDetails(models.Model):
     rc_baselined = models.BooleanField(default=False)
 
     def __unicode__(self):
-        return self.release_name
+        return self.release.project_release_name

@@ -2,8 +2,7 @@ angular.module('squashappng', [
     'ui.router',
     'ngResource',
     'squashappng.services',
-    'squashappng.controller',
-    'squashappng.filter',
+    'squashappng.controller'
 ])
 
 .config(function($interpolateProvider, $httpProvider,

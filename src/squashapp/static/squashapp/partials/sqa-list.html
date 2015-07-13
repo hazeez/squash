@@ -1,3 +1,4 @@
+<div class="well">
     <table class="table table-striped">
     <tr class='custom-table-header'>
         <td>No</td>
@@ -5,17 +6,19 @@
         <td>Release ID</td>
         <td>Type</td>
         <td>Region</td>
+        <td>SubRegion</td>
         <td>SQA Contact</td>
         <td>Start Date</td>
         <td>End Date</td>
         <td>Status</td>
     </tr>
-    <tr ng-repeat="project in filtered = (sqaprojects | filter: searchText | orderBy:'-project_status')" >
+    <tr ng-repeat="project in filtered= (sqaprojects | filter: searchText | orderBy:'-project_status')" >
         <td>{$$ $index+1 $$}</td>
         <td>{$$ project.project_release_name$$}</td>
         <td>{$$ project.project_uid$$}</td>
         <td>{$$ project.project_class$$}</td>
         <td>{$$ project.project_region$$}</td>
+        <td>{$$ project.project_subregion$$}</td>
         <td>{$$ project.project_primary_sqa$$}</td>
         <td>{$$ project.project_start_date | date $$}</td>
         <td>{$$ project.project_end_date | date $$}</td>
@@ -26,7 +29,7 @@
 <div class="filtered-rows">
     {$$ filtered.length $$} rows returned.
 </div>
-
+</div>
 <br/>
 <br/>
 <br/>
