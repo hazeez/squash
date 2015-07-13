@@ -138,9 +138,22 @@ class ProjectReviewDetails(models.Model):
     pkom_checklist_shared = models.BooleanField(default=False)
     pkom_completed = models.BooleanField(default=False)
 
+    #milestones
+    cut_start_date = models.DateField(blank=True, default="1978-01-01")
+    cut_end_date = models.DateField(blank=True, default="1978-01-01")
+    iut_start_date = models.DateField(blank=True, default="1978-01-01")
+    iut_end_date = models.DateField(blank=True, default="1978-01-01")
+    itr1_start_date = models.DateField(blank=True, default="1978-01-01")
+    itr1_end_date = models.DateField(blank=True, default="1978-01-01")
+    itr2_start_date = models.DateField(blank=True, default="1978-01-01")
+    itr2_end_date = models.DateField(blank=True, default="1978-01-01")
+    release_start_date = models.DateField(blank=True, default="1978-01-01")
+    release_end_date = models.DateField(blank=True, default="1978-01-01")
+
     # Project Planning
     project_plans_applicable = models.CharField(max_length=3, default="No", choices=CHOICES)
     oum_estimator_baselined = models.BooleanField(default = False)
+    oum_estimator_questionnaire_baselined = models.BooleanField(default = False)
     pmp_peer_reviewed = models.BooleanField(default=False)
     pmp_sme_reviewed = models.BooleanField(default=False)
     pmp_qmg_reviewed = models.BooleanField(default=False)
@@ -270,6 +283,7 @@ class ProjectReviewDetails(models.Model):
     itr1_bugs_closed = models.BooleanField(default=False)
     itr1_open_bug_details = models.TextField(max_length=200, blank=True)
     itr1_rca_done = models.BooleanField(default=False)
+    itr1_exit_criteria_baselined = models.BooleanField(default=False)
 
     #ITR1 Audits
     itr1_audit_completed = models.BooleanField(default=False)
@@ -280,11 +294,23 @@ class ProjectReviewDetails(models.Model):
     itr1_audit_minor_issues = models.IntegerField(default=0)
     itr1_audit_details = models.TextField(max_length=200, blank=True)
 
+    # Documentation
+    user_manuals_applicable = models.CharField(choices=CHOICES, max_length=3, default="No")
+    help_files_applicable = models.BooleanField(default=False)
+    um_peer_reviewed = models.BooleanField(default=False)
+    um_testteam_reviewed = models.BooleanField(default=False)
+    um_devteam_reviewed = models.BooleanField(default=False)
+    um_qmg_reviewed = models.BooleanField(default=False)
+    um_baselined = models.BooleanField(default=False)
+    help_files_baselined = models.BooleanField(default=False)
+    no_of_user_manuals = models.IntegerField(default = 0)
+
     #ITR2 start
     itr2start_applicable = models.CharField(choices=CHOICES, max_length=3, default="No")
     itr2_code_checkedin = models.BooleanField(default=False)
     itr2_schema_details_obtained = models.BooleanField(default=False)
     itr2start_tagging_done = models.BooleanField(default=False)
+    itr2_start_email_sent = models.BooleanField(default=False)
 
     #ITR2 Bugs
     itr2_bug_report_obtained = models.BooleanField(default=False)
@@ -298,21 +324,9 @@ class ProjectReviewDetails(models.Model):
     itr2_open_bug_details = models.TextField(max_length=200, blank=True)
     itr2_rca_done = models.BooleanField(default=False)
 
-    # Documentation
-    user_manuals_applicable = models.CharField(choices=CHOICES, max_length=3, default="No")
-    help_files_applicable = models.BooleanField(default=False)
-    um_peer_reviewed = models.BooleanField(default=False)
-    um_testteam_reviewed = models.BooleanField(default=False)
-    um_devteam_reviewed = models.BooleanField(default=False)
-    um_qmg_reviewed = models.BooleanField(default=False)
-    um_baselined = models.BooleanField(default=False)
-    help_files_baselined = models.BooleanField(default=False)
-    no_of_user_manuals = models.IntegerField(default = 0)
-
     # Release
     itr2_tps_checks_done = models.BooleanField(default=False)
     itr2_fortify_checks_done = models.BooleanField(default=False)
-    itr2_start_email_sent = models.BooleanField(default=False)
     release_note_applicable = models.CharField(choices=CHOICES, max_length=3, default="No")
     release_note_peer_reviewed = models.BooleanField(default=False)
     release_note_qmg_reviewed = models.BooleanField(default=False)
