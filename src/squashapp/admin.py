@@ -24,7 +24,7 @@ class ProjectDatabaseAdmin(admin.ModelAdmin):
     list_display = ['project_release_name','project_uid','project_products','project_class','project_manager','project_managed_by','project_start_date','project_end_date',]
 
 class ProjectReviewDetailsAdmin(admin.ModelAdmin):
-    list_display = ['release','fs_date','ds_date','cut_start_date','cut_end_date','iut_start_date','iut_end_date',]
+    list_display = ['release','cut_start_date','cut_end_date','iut_start_date','iut_end_date',]
 
 admin.site.register(SubRegionDatabase, SubRegionDatabaseAdmin )
 admin.site.register(SQAContactDatabase, SQAContactDatabaseAdmin)

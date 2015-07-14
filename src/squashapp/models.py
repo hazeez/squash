@@ -86,7 +86,7 @@ class ProjectDatabase(models.Model):
     SCMTOOLS = (('SVN','SVN'),('VSS','VSS'))
     BUGTOOLS = (('JIRA','JIRA'),('BUGZ','BUGZ'),('CUST','CUST'))
 
-    project_release_name = models.CharField(max_length=30, blank=False, primary_key=True)
+    project_release_name = models.CharField(max_length=40, blank=False, primary_key=True)
     project_uid = models.CharField(max_length=15, blank=False, default="0")
     project_customer_name = models.CharField(max_length=40, blank=True, default="My Bank")
     project_class = models.CharField(max_length=3, blank=False, choices=PROJECT_TYPES, default="IUT")
@@ -130,7 +130,7 @@ class ProjectDatabase(models.Model):
 class ProjectReviewDetails(models.Model):
     CHOICES = list((x.choice_code, x.choice_alias)for x in OptionChoice.objects.all())
 
-    release = models.ForeignKey(ProjectDatabase)
+    release = models.ForeignKey(ProjectDatabase, related_name='project_details')
 
     # PKOM Details
     pkom_applicable = models.CharField(max_length=3, default="No", choices=CHOICES)
@@ -140,9 +140,6 @@ class ProjectReviewDetails(models.Model):
     pkom_completed = models.BooleanField(default=False)
 
     #milestones
-    plans_date = models.DateField(blank=True, default="1978-01-01")
-    fs_date = models.DateField(blank=True, default="1978-01-01")
-    ds_date = models.DateField(blank=True, default="1978-01-01")
     cut_start_date = models.DateField(blank=True, default="1978-01-01")
     cut_end_date = models.DateField(blank=True, default="1978-01-01")
     iut_start_date = models.DateField(blank=True, default="1978-01-01")
@@ -151,6 +148,8 @@ class ProjectReviewDetails(models.Model):
     itr1_end_date = models.DateField(blank=True, default="1978-01-01")
     itr2_start_date = models.DateField(blank=True, default="1978-01-01")
     itr2_end_date = models.DateField(blank=True, default="1978-01-01")
+    itr3_start_date = models.DateField(blank=True, default="1978-01-01")
+    itr3_end_date = models.DateField(blank=True, default="1978-01-01")
     release_start_date = models.DateField(blank=True, default="1978-01-01")
     release_end_date = models.DateField(blank=True, default="1978-01-01")
 

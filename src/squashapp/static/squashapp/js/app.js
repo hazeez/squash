@@ -24,13 +24,16 @@ angular.module('squashappng', [
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
+    // .state('projectdetails',{
+    //     url:'/projectdetails',
+    //     templateUrl : '/static/squashapp/partials/project-details.html',
+    // })
     .state('regionprojects', {
         // url: '/:name',
         url:'/regionprojects',
         templateUrl : '/static/squashapp/partials/region-projects.html',
         controller: 'RegionProjectsCtrl',
-    });
-    $stateProvider
+    })
     .state('myprojects', {
         // url: '/:name',
         url:'/:name1',

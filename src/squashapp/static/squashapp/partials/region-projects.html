@@ -14,23 +14,29 @@
         <td>No</td>
         <td>Release Name</td>
         <td>Release ID</td>
+        <td>Mgd By</td>
         <td>Type</td>
+        <td>TPD</td>
         <td>Region</td>
         <td>SubRegion</td>
+        <td>Project Manager</td>
         <td>SQA Contact</td>
         <td>Start Date</td>
         <td>End Date</td>
         <td>Status</td>
     </tr>
-    <tr ng-repeat="project in filtered = (regionalprojects | filter: filterRegions())" >
+    <tr ng-repeat="project in filtered = (regionalprojects |  filter:filterRegions())" >
         <td>{$$ $index+1 $$}</td>
-        <td>{$$ project.project_release_name$$}</td>
+        <td >{$$ project.project_release_name$$}</td>
         <td>{$$ project.project_uid$$}</td>
+        <td>{$$ project.project_managed_by$$}</td>
         <td>{$$ project.project_class$$}</td>
+        <td>{$$ project.project_total_effort$$}</td>
         <td>{$$ project.project_region$$}</td>
         <td>{$$ project.project_subregion$$}</td>
+        <td>{$$ project.project_manager$$}</td>
         <td>{$$ project.project_primary_sqa$$}</td>
-        <td>{$$ project.project_start_date | date $$}</td>
+        <td>{$$ project.project_start_date | date $$} </td>
         <td>{$$ project.project_end_date | date $$}</td>
         <td>{$$ project.project_status $$}</td>
     </tr>
