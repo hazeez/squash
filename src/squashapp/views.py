@@ -16,7 +16,7 @@ def home(request):
 
 # get all the projects
 class ProjectList(generics.ListAPIView):
-    queryset = ProjectDatabase.objects.all().order_by('-project_end_date')
+    queryset = ProjectDatabase.objects.all().order_by('project_end_date')
     serializer_class = AllProjectsSerializer
 
 # get projects belonging to the user
@@ -26,7 +26,7 @@ class MyProjectsList(generics.ListAPIView): #RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         sqaname = self.kwargs.get(self.lookup_url_kwarg)
-        queryset = ProjectDatabase.objects.filter(project_primary_sqa=sqaname).order_by('-project_end_date')
+        queryset = ProjectDatabase.objects.filter(project_primary_sqa=sqaname).order_by('project_end_date')
         return queryset
 
 # get extended project details
