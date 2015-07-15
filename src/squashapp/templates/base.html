@@ -88,13 +88,16 @@
                     <li class="custom-main-list">
                         <a href="#">My Dashboard</a>
                     </li>
-                    <li role="separator" class="divider"></li>
                     <li class="custom-main-list">
-                        <a>Release</a>
+                        <a>Releases</a>
                     </li>
-                    <ul>
-                        <li class="custom-sub-list">
+                    <ul class="custom-sub-list">
+                        <li >
                             <a href="#">Create Release</a>
+                        </li>
+                        <br/>
+                        <li>
+                            <a ui-sref="projectslist"> View Releases </a>
                         </li>
                     </ul>
                 </ul>
@@ -117,12 +120,12 @@
                         ProjectListCtrl
                 {% endblock ngcontrol %}">
                 {% block navtabs %}
-                <ul class="nav nav-tabs">
+                <!-- <ul class="nav nav-tabs">
                     <li ui-sref-active="active"> <a ui-sref="projectslist">All Projects</a></li>
                     <li ui-sref-active="active"><a ui-sref="myprojects({name1:AuthUser})">My Projects</a></li>
                     <li ui-sref-active="active"><a ui-sref="regionprojects">Region Projects</a></li>
 
-                </ul>
+                </ul> -->
                 {% endblock navtabs %}
                 <div ui-view></div>
                 {% block content %}
@@ -131,7 +134,6 @@
             </div>
         </div>
         {% endblock content-wrapper %}
-        <h3>"{{ project.project_region }}"</h3>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -146,6 +148,12 @@
                 sqaname: "{{ request.user }}",
             };
         });
+        // .factory('ReleaseName', function() {
+
+        //     return {
+        //         releasename: "{$$ releasename $$}",
+        //     };
+        // });
     </script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->

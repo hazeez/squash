@@ -11,6 +11,14 @@ angular.module('squashappng.services', ['ngResource'])
 })
 .factory('RegionProjects', function($resource){
     return $resource('/api/projects/');
+})
+.factory('ProjectDetails', function($resource){
+    return $resource('/api/releasedetails/:releasename');
+})
+// using a service to get data from ProjectListCtrl and ProjectDetailsCtrl
+.service('getReleaseName', function (){
+    var getReleaseName = this;
+    getReleaseName.releasename = "Default";
 });
 
 

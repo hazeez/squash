@@ -24,10 +24,11 @@ angular.module('squashappng', [
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-    // .state('projectdetails',{
-    //     url:'/projectdetails',
-    //     templateUrl : '/static/squashapp/partials/project-details.html',
-    // })
+    .state('projectdetails',{
+        url:'/projectdetails/:releasename',
+        templateUrl : '/static/squashapp/partials/project-details.html',
+        controller: 'ProjectDetailsCtrl',
+    })
     .state('regionprojects', {
         // url: '/:name',
         url:'/regionprojects',
@@ -36,12 +37,12 @@ angular.module('squashappng', [
     })
     .state('myprojects', {
         // url: '/:name',
-        url:'/:name1',
+        url:'/myprojects/:name1',
         templateUrl : '/static/squashapp/partials/sqa-list.html',
         controller: 'MyProjectsCtrl',
     })
     .state('projectslist', {
-        url: '/',
+        url: '/allprojects',
         templateUrl : '/static/squashapp/partials/project-list.html',
         controller: 'ProjectListCtrl',
     });
